@@ -1,0 +1,2027 @@
+@font-face { 
+    src: url("../font_aos/Gom_bold.ttf");
+    font-family: "Gom_bold";
+   
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 
+반응형 퍼센트 구하기 :
+
+자식태그(px) / 부모태그(px) = 결과값
+결과값 * 100 = %(퍼센트)
+
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+body{
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* header */
+#wrap{
+    width: 100vw; 
+    height: 100vh;
+    margin: auto;
+    position: relative;
+}
+header{
+    width: 75.79%; /*1440/1900*100 */
+    min-width: 1000px;
+    height: 13.89%; /*150*/
+    overflow: hidden;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+header .left{
+   width: 32.5%; /*465*/
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+header .icon {
+    text-align: center;
+}
+
+header .icon>a>img{
+    display: block;
+    margin: auto;
+    margin-bottom: 6px;
+}
+header .icon>a>span{
+    color: #006545;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+header .right{
+    width: 54.62%; /*700*/
+    min-width: 600px;
+}
+header .right ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .right ul>li>a{
+    font-size: 3rem;
+    font-family: "Gom_bold";
+    display: block;
+    text-align: center;
+}
+header .right ul>li>a:hover{
+    color: #006545;
+}
+header .ham{
+    display: none;
+    cursor: pointer;
+}
+.ham_menu{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.932);
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    right: -60%;
+    z-index: 99;
+    
+}
+.ham_menu i{
+    font-size: 50px;
+    transform: translate(80%,50px);
+    cursor: pointer;
+}
+
+.ham_menu ul{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 98px;
+}
+.ham_menu ul li{
+ display: block;
+ line-height: 80px;
+ font-weight: 700;
+}
+.ham_menu ul li a{
+    font-size: 4.2rem;
+    font-family: "Gom_bold";
+}
+.ham_menu.on{
+    right: 0;
+    transition: 0.5s;
+}
+.ham_menu.off{
+    right: -60%;
+    transition: 0.5s;
+}
+
+
+
+/* main */
+.main{
+    width: 100%;
+    /* height: 86.11%; 930 */
+    overflow: hidden;
+    margin: auto;
+    background-color: #006545;
+    position: relative;
+}
+.main>img{
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+    width: 16.79%;
+    min-width: 16.79%;
+}
+
+.main .line{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 3.68% 1.3% 3.68%;
+    box-sizing: border-box;
+}
+.main .line>img{
+    width: 34.74%;
+}
+/* .main > button{
+    width: 5.26%; 100
+    height: 30px;
+    border:none;
+    background-color:  rgba(0, 0, 0, 0);
+    margin : auto 0; 
+    position: relative;
+    left: 50%;
+    top: 20px;
+    margin-left: -50px;
+    color: #fff;
+    font-weight: 600;
+} */
+
+
+/* brand */
+
+#brand{
+    width: 75.79%; /*1440*/
+    margin: auto;
+    position: relative;
+}
+#brand>img {
+    margin: auto;
+    padding: 77px 0 36px 0;
+    box-sizing: border-box;
+}
+#brand .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#brand >p{
+    text-align: center;
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+    bottom: 67px;
+    z-index: 99;
+}
+.title>h3{
+    font-size: 24.9rem;
+    font-family: "Gom_bold";
+}
+
+.title>h1{
+    font-size: 9rem;
+    font-family: "Gom_bold";
+    color: #000;
+    margin-top: 100px;
+}
+.title>h1>span{
+    font-size: 9rem;
+    font-family: "Gom_bold";
+    color: #006545;
+}
+.title .b2{
+    margin-top: 220px;
+}
+
+
+/* beer */
+.beer{
+    width: 75.79%;
+    height: 100vh;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.beer .content{
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: "Gom_bold";
+    line-height: 9rem;
+    color: #000;
+}
+.beer .content>span{
+    background-color: #006545;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Gom_bold";
+    padding: 0 22px;
+    box-sizing: border-box;
+}
+.beer .beer_img{
+    width: 54.51%; /*758*/
+    display: flex;
+    justify-content: space-between;
+}
+
+/* product // best */
+#product{
+    width: 100%;
+    height: 100vh;
+   
+}
+.best{
+    width: 75.79%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.best > h3{
+    font-family: "Gom_bold";
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 80px;
+}
+
+.b_box{
+    width: 100%;
+   height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.b_box .slide{
+    width: 50%; 
+    position: relative;
+}
+.b_box .slide .slide_box{
+    width: 500px; 
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+.b_box .slide .slide_box ul{
+    width: 1944px;
+    display: flex;
+    flex-direction: row;
+}
+.b_box .slide .slide_box ul li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.b_box .slide .slide_box ul li h1{
+    font-size: 3.6rem;
+    font-weight: 700;
+    font-family: "Gom_bold";
+    margin-top: 50px;
+}
+
+.best_title{
+    /* width: 50%; */
+    text-align: center;
+}
+.best_title>h1{
+    font-size: 7.2rem;
+    font-family: "Gom_bold";
+    color: #fff;
+    -webkit-text-stroke: 3px #006545;
+    -webkit-text-fill-color: #fff;
+    text-shadow: 7px 1px 0px #006545;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.best_title h3{
+    font-size: 3.3rem;
+    font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.best_title p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 50px 0;
+}
+.best_title button{
+    width: 50%; /*162*/
+    height: 61px;
+    border: 5px solid rgb(27, 27, 27);
+    background-color: #fff;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.best_title>button:hover{
+    border: none;
+    background-color: #006545;
+    color: #fff;
+}
+.arrow a.prev{
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    z-index: 99;
+}
+
+
+/* cake */
+.cake_bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("img/main/배경.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% , 50%;
+    display: flex;
+    align-items: center;
+}
+.cake{
+    width: 75.79%; /*1440*/
+    margin: 0 12.63%; /*240*/
+    /* padding-top: 280px;
+    box-sizing: border-box; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+.cake_img{
+    width: 52.29%;
+}
+.cake_content{
+    text-align: center;
+    width: 33.61%; /*412*/
+    margin-right: 5.28%; /*76*/
+    
+    box-sizing: border-box;
+
+    float: right;
+}
+.cake_content .line{
+    width: 100%; /*412*/
+    height: 5px;
+    border:1px solid #fff ;
+}
+.cake_content >h1{
+    font-size: 5rem;
+    font-family: "Gom_bold";
+    color: #fff;
+    -webkit-text-stroke: 1px #ffffff;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    text-shadow: 5px -2px 0px #ffffff;
+    margin: 31px 0 25px 0;
+    box-sizing: border-box;
+}
+.cake_content .line:last-child{
+    margin-bottom: 51px;
+}
+.cake_content .next{
+    display: block;
+    margin-left:55.83%; /*230*/
+    margin-top: 51px;
+}
+
+/* section */
+section{
+    width: 100%;
+    background-image: url("img/main/체크.png");
+    background-attachment: fixed;
+    position: relative;
+}
+/* // */
+/* #first{
+    margin-top: 47px;
+    margin-bottom: 106px;
+} */
+.box{
+    margin-top: 47px;
+    margin-bottom: 106px;
+}
+.box hr{
+    display: block;
+    border: #006545 0 none;
+    height: 2px;
+    border-top: 4px solid #006545;
+    border-bottom: 4px solid #006545;
+}
+.box h1{
+    margin-bottom: 26px;
+    font-size: 3.5rem;
+    font-family: "Gom_bold";
+    color: #006545;
+}
+
+.god{
+    width: 75.79%; /*1440*/
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+/* // */
+
+.g1{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 1.39%; 
+    box-sizing: border-box;  
+}
+.g1_content{
+    margin-top: 80px;
+}
+.g1_content h1{
+    font-size: 5.3rem;
+    font-family: "Gom_bold";
+    color: #000;
+}
+.g1_content h3{
+    font-size: 3.5rem;
+    font-family: "Gom_bold";
+    color: #006545;
+    margin: 13px 0 33px 0;
+}
+.g1_content p{
+    font-size: 1.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #7E7E7E;
+    font-weight: 700;
+    line-height: 40px;
+}
+.g1_img{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /*961*/
+}
+.g1_img>img:nth-child(1){
+   scale: 1.12;
+   position: relative;
+   left: -5%;
+}
+.g1_img>img:nth-child(2){
+    position: relative;
+    top: 18%;
+}
+
+.direction{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+}
+
+/* // */
+.box .b2{
+    text-align: end;
+}
+.g2{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.39%; /*20px*/
+    box-sizing: border-box;
+    margin-top: 105px;
+    align-items: center;
+    position: relative;
+}
+.g2_content{
+    width: 45%;
+}
+.g2_content h1{
+    font-size: 5.5rem;
+    font-family: "Gom_bold";
+    color: #000;
+}
+.g2_content h3{
+    font-size: 3.5rem;
+    font-family: "Gom_bold";
+    color: #006545;
+    margin: 21px 0 67px 0;
+}
+.g2_content p{
+    font-size: 1.8rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #7E7E7E;
+    font-weight: 700;
+    line-height: 40px; 
+}
+.g2_img{
+    height: 59.79%; /*861*/
+    position: relative;
+}
+.g2_img>img:last-child{
+    /* position: absolute;
+    top: 427px;
+    left: 16.38%;  */
+    margin-left: 16.38%;
+    position: relative;
+    z-index: 99;
+    top: -30px;
+}
+.direc{
+    position: absolute;
+    top: 32%;
+    right: 20px;
+
+}
+
+/* nopo */
+.box:last-child{
+    margin-bottom: 45px;
+}
+.nopo{
+    width: 75.79%;
+    overflow: hidden;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 30px 30px 75px 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+.nopo_img{
+    width: 54%;
+    position: relative;
+}
+.nopo_content{
+    position: relative;
+    margin-left: 65px;
+}
+.nopo_content h1{
+    font-size: 5.5rem;
+    font-family: "Gom_bold";
+    color: #000;
+    margin-bottom: 31px;
+}
+.nopo_content h3{
+    font-size: 3.2rem;
+    font-family: "Gom_bold";
+    color: #006545;
+    margin-bottom: 70px;
+}
+.nopo_content p{
+    font-size: 2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #7E7E7E;
+    font-weight: 700;
+}
+.no_direc{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+
+/* footer */
+footer{
+    width: 75.79%;
+    overflow: hidden;
+    margin: auto;
+    padding: 53px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.f_logo{
+    width: 14.03%;
+}
+.f_left>ul{
+    margin: 49px 0 58px 0;
+}
+.f_left>ul>li>a{
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 60px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+}
+.f_left >p{
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.f_right{
+    width: 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.f_right>a{
+    font-size: 4.2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 88px;
+}
+
+
+
+
+
+/* 반응형 */
+
+/* pc */
+@media screen and (min-width:1380px) and (max-width:1748px) {
+    .title>h1{
+        font-size: 7rem;
+    }
+    .title>h1 span{
+        font-size: 7rem;
+    }
+    .title>h3{
+        font-size: 20.9rem;
+    }
+    /**/
+    .beer .content{
+        font-size: 3rem;
+    }
+    .beer .content span{
+        font-size: 4rem;
+    }
+    .beer .beer_img{
+        width: 54.51%;
+    }
+
+    /**/
+    .cake_content{
+        width: 40.61%;
+    }
+
+    #product{
+        height: auto;
+    }
+    .b_box{
+        height: auto;
+    }
+    /**/
+    .g1_img>img:nth-child(1){
+        scale: 1;
+        left: 5%;
+    }
+    .g1_img>img:nth-child(2){
+        scale: 0.95;
+    }
+    .direction{
+        left: 24%;
+    }
+
+    /**/
+    .g2_img>img:first-child{
+        scale: 0.85;
+        position: relative;
+        left: -3%;
+    }
+    .g2_img>img:last-child{
+        scale: 0.8;
+        margin-left: 13.38%;
+        top: -94px;
+    }
+    .g1_content p{
+        font-size: 1.6rem;
+    }
+    .g2_content p{
+        font-size: 1.6rem;
+    }
+    .no_direc{
+        right: 0%;
+    }
+    .f_right{
+        width: 21%;
+    }
+}
+
+@media screen and (min-width:1204px) and (max-width:1380px) {
+    .title>h1{
+        font-size: 6rem;
+    }
+    .title>h1 span{
+        font-size: 6rem;
+    }
+    .title>h3{
+        font-size: 19.9rem;
+    }
+    #brand >p{
+        font-size: 1.5rem;
+    }
+        /**/
+        .beer .content{
+            font-size: 3rem;
+        }
+        .beer .content span{
+            font-size: 3.5rem;
+        }
+        .beer .beer_img{
+            width: 45.51%;
+        }
+        .beer_img>img:last-child{
+            display: none;
+        }
+    
+        /**/
+        .best > h3{
+            margin: 0;
+        }
+        .best_title>h1{
+            font-size: 6.2rem;
+        }
+
+        /**/
+        #product{
+            height: auto;
+        }
+        .b_box{
+            height: auto;
+        }
+        .cake_content{
+            width: 40.61%;
+        }
+        .cake_content >h1{
+            font-size: 4.4rem;
+        }
+        /**/
+        .g1_content{
+            width: 27%;
+        }
+        .g1_img>img:nth-child(1){
+            scale: 0.8;
+            left: 12%;
+        }
+        .g1_img>img:nth-child(2){
+            scale: 0.75;
+            left: -3%;
+        }
+        .direction{
+            left: 30%;
+        }
+    
+        /**/
+        .g2_img>img:first-child{
+            scale: 0.8;
+            position: relative;
+            left: -3%;
+        }
+        .g2_img>img:last-child{
+            scale: 0.7;
+            margin-left: 8.38%;
+            top: -135px;
+        }
+        .g2_content{
+            width: 60%;
+        }
+        .g1_content p{
+            font-size: 1.6rem;
+        }
+        .g2_content p{
+            font-size: 1.6rem;
+        }
+        .nopo_content{
+            width: 50%;
+            margin-left: 40px;
+        }
+        .no_direc{
+           bottom: 16%;
+           right: 0;
+        }
+        .f_right{
+            width: 33%;
+        }
+        .f_right>a{
+            font-size: 4rem;
+        }
+}
+
+@media screen and (min-width:1023px) and (max-width:1204px) {
+        /**/
+        header .left{
+            width: 33.5%;
+        }
+        header .left .logo{
+            width: 45%;
+        }
+        header .right ul>li>a{
+            font-size: 2.5rem;
+        }
+        header .right{
+            width: 55.63%;
+            min-width: 554px;
+        }
+        /**/
+        .title>h1{
+            font-size: 4.8rem;
+        }
+        .title>h1 span{
+            font-size: 4.8rem;
+        }
+        .title>h3{
+            font-size: 18.5rem;
+        }
+        #brand >p{
+            font-size: 1.3rem;
+            line-height: 20px;
+        }
+        /**/
+        .beer .content{
+            font-size: 2.3rem;
+        }
+        .beer .content span{
+            font-size: 3.3rem;
+        }
+        .beer .beer_img{
+            width: 50.51%;
+        }
+        .beer_img>img:last-child{
+            display: none;
+        }
+    
+
+       /**/
+        .b_box{
+            height: auto;
+        }
+        .b_box .slide .slide_box ul li img{
+            width:75%;
+        }
+        .b_box .slide .slide_box ul li h1{
+            font-size: 2.6rem;
+        }
+        .best_title {
+            width: 42%;
+        }
+        .best_title h3{
+            font-size: 3rem;
+        }
+        .best_title p{
+            font-size: 2rem;
+        }
+        .best_title button{
+            width: 60%;
+        }
+        .best_title>h1{
+            font-size: 4.2rem;
+            -webkit-text-stroke:2px #006545;
+            text-shadow: 5px 1px 0px #006545;
+        }
+
+        /**/
+        .cake_content{
+            width: 43.61%;
+            margin: 0;
+        }
+        .cake_content >h1{
+            font-size: 4rem;
+            
+        }
+        /**/
+        .g1_content h1{
+            font-size: 5rem;
+        }
+        .g1_content{
+            width: 37%;
+            margin: 0;
+        }
+        .g1_img>img:nth-child(1){
+            scale: 0.7;
+            left: 7%;
+        }
+        .g1_img>img:nth-child(2){
+            scale: 0.65;
+            left: -24%;
+            top: 36%;
+        }
+        .direction{
+            top: 0%;
+            left: 33%;
+        }
+    
+        /**/
+        .g2_content h1{
+            font-size: 5rem;
+        }
+        .g2_img>img:first-child{
+            scale: 0.8;
+            position: relative;
+            left: -8%;
+        }
+        .g2_img>img:last-child{
+            scale: 0.7;
+            margin-left: 8.38%;
+            top: -113px;
+        }
+        .g2_content{
+            width: 67%;
+        }
+        .g1_content p{
+            font-size: 1.6rem;
+        }
+        .g2_content p{
+            font-size: 1.6rem;
+        }
+        .nopo_content h1{
+            font-size: 5rem;
+        }
+        .nopo_content{
+            width: 53%;
+            margin-left: 30px;
+        }
+        .no_direc{
+           display: none;
+        }
+        .f_right{
+            width: 33%;
+        }
+        .f_right>a{
+            font-size: 3.5rem;
+        }
+}
+
+
+/* 테블릿 */
+@media screen and (min-width:767px) and (max-width:1023px){
+    *{
+        font-size: 8px;
+    }
+    header{
+        min-width: 768px;
+        padding: 0;
+    }
+    
+    header .left{
+        width: 36.5%;
+    }
+    header .left .logo{
+        width: 45%;
+    }
+    header .left .icon>a>img{
+        width: 74%;
+    }
+    header .right{
+        width: 56.62%;
+        min-width: 400px;
+    }
+    header .right ul>li>a{
+        font-size: 2.5rem;
+    }
+
+    /**/
+    .title>h1{
+        font-size: 4.7rem;
+    }
+    .title>h1>span{
+        font-size: 4.7rem;
+    }
+    .title>h3{
+        font-size: 15.9rem;
+    }
+    #brand >p{
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 20px;
+    }
+
+
+    /*beer*/
+    .beer{
+        height: 60vh;
+    }
+    .beer .content{
+        width: 50%;
+        font-size: 2.3rem;
+    }
+    .beer .content>span{
+        font-size: 3rem;
+    }
+    .beer .beer_img>img{
+        width: 45%;
+    }
+    .beer .beer_img{
+        width: 46.51%;
+    }
+    .beer .beer_img>img:last-child{
+        display: none;
+    }
+    
+
+    /*best*/
+    #product{
+        height: 60vh;
+    }
+    .b_box{
+        height: auto;
+    }
+    .b_box .slide .slide_box{
+        width: 350px;
+    }
+    .b_box .slide .slide_box ul{
+        width: 1400px;
+    }
+    .b_box .slide .slide_box ul li img{
+        width:75%;
+    }
+    .b_box .slide .slide_box ul li h1{
+        font-size: 2.6rem;
+    }
+    .best_title {
+        width: 42%;
+    }
+    .best_title h3{
+        font-size: 3rem;
+    }
+    .best_title p{
+        font-size: 2rem;
+    }
+    .best_title button{
+        width: 65%;
+    }
+    .best_title>h1{
+        font-size: 4.2rem;
+        -webkit-text-stroke:2px #006545;
+        text-shadow: 5px 1px 0px #006545;
+    }
+   
+
+    /*cake*/
+    .cake_bg{
+        height: 60vh;
+    }
+    .cake_content{
+        width: 42.61%;
+        margin: 0;
+    }
+    .cake_content>h1{
+        font-size: 3.7rem;
+    }
+    /**/
+    .g1_img{
+        width: 80%;
+    }
+    .g1_content h1{
+        font-size: 4.5rem;
+    }
+    .g1_content{
+        width: 47%;
+        margin: 0;
+    }
+    .g1_content p{
+        font-size: 1.4rem;
+    }
+    .g1_img>img:nth-child(1){
+        scale: 0.65;
+        left: 0;
+        top: -14%;
+    }
+    .g1_img>img:nth-child(2){
+        scale: 0.6;
+        left: -45%;
+        top: 34%;
+    }
+    .direction{
+        top: 0%;
+        left: 35%;
+    }
+
+    /**/
+    .g2_content h1{
+        font-size: 4.5rem;
+    }
+    .g2_img>img:first-child{
+        scale: 0.8;
+        position: relative;
+        left: -8%;
+    }
+    .g2_img>img:last-child{
+        scale: 0.7;
+        margin-left: 8.38%;
+        top: -113px;
+    }
+    .g2_content{
+        width: 79%;
+    }
+    .g2_content p{
+        font-size: 1.3rem;
+    }
+    .direc{
+        top: 82%;
+        right: 0;
+    }
+
+    /**/
+    .nopo_content h1{
+        font-size: 4.5rem;
+    }
+    .nopo_content{
+        width: 45%;
+        margin-left: 20px;
+    }
+    .nopo_content h3{
+        font-size: 2.7rem;
+        margin-bottom: 40px;
+    }
+    .nopo_content p{
+        font-size: 1.4rem;
+    }
+    .no_direc{
+       display: none;
+    }
+    /**/
+    .f_logo{
+        width: 30.05%;
+    }
+    .f_left >p{
+        font-size: 1.5rem;
+    }
+    .f_right{
+        width: 31%;
+    }
+    .f_right>a{
+        font-size: 3rem;
+    }
+    @media screen and (max-width:1000px) {
+        .g1_img{
+            width: 76%;
+        }
+        .g1_img>img:nth-child(1){
+            scale: 0.65;
+            left: -9%;
+            top: -14%;
+        }
+        .g1_img>img:nth-child(2){
+            scale: 0.6;
+            left: -72%;
+            top: 40%;
+        }
+    }
+    @media screen and (max-width:862px) {
+        .g1_img>img:nth-child(1){
+            scale: 0.6;
+            left: -9%;
+            top: -14%;
+        }
+        .g1_img>img:nth-child(2){
+            scale: 0.55;
+            left: -78%;
+            top: 34%;
+        }
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:767px){
+    /**/
+    *{
+        font-size: 6px;
+    }
+    header .icon>a>img{
+        width: 80%;
+    }
+    header{
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    header .left{
+        width: 43.5%;
+    }
+    
+    header .right{
+        display: none;
+    }
+    header .ham{
+        display: block;
+        width: 45px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    header .ham .box1,.box2,.box3{
+        width: 45px;
+        height: 5px;
+        background-color: #006545;
+    }
+    /**/
+    
+    .title{
+        position: relative;
+    }
+    .title>h1{
+        font-size: 6rem;
+        margin-top: 100px;
+        position: absolute;
+        top: 0;
+        left:11%;
+       
+    }
+    .title>h1>span{
+        font-size: 6rem;
+    }
+   
+
+    /**/
+    .beer{
+        height: 70vh;
+    }
+    .beer .content{
+        width: 77%;
+        font-size: 3.5rem;
+    }
+    .beer .content>span{
+        font-size: 4rem;
+    }
+    .beer .beer_img{
+        justify-content: center;
+    }
+    .beer .beer_img>img:last-child{
+        display: none;
+    }
+    .beer .beer_img>img:nth-child(2){
+        display: none;
+    }
+   
+    /**/
+    #product{
+        height: 60vh;
+    }
+    .best > h3{
+        margin-bottom: 50px;
+    }
+    .b_box{
+        height: auto;
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .b_box .slide{
+        width: auto;
+    }
+    .best_title{
+        width: auto;
+    }
+    .best_title>h1{
+        margin-bottom: 0;
+    }
+    .best_title h3{
+        display: none;
+    }
+    .best_title>p{
+        display: none;
+    }
+    .best_title button{
+        position: absolute;
+        left: 25%;
+        bottom: -15%;
+    }
+    .b_box .slide .slide_box ul li h1{
+        font-size: 4.6rem;
+        margin-top: 0;
+    }
+    .arrow a.prev{
+        top: 45%;
+        left: 0;
+    }
+  
+    /**/
+    .cake{
+        width: 78.79%;
+        margin: auto;
+    }
+    .cake_content{
+        width: 40.61%;
+       margin-right: 0;
+    }
+    .cake_content>h1{
+        font-size: 4.7rem;
+        text-shadow:3px -2px 0px #ffffff;
+    }
+    .cake_content .next{
+        width: 50%;
+    }
+    .cake_img{
+        width: 56.29%;
+    }
+
+    /**/
+    .box{
+        margin-bottom: 20px;
+    }
+    .g1{
+        flex-direction: column;
+    }
+    .g1_content{
+        margin-top: 40px;
+    }
+    .g1_img{
+        flex-direction: column;
+        position: inherit;
+    }
+    .g1_img>img:nth-child(1){
+      position: inherit;
+       width: 40%;
+       margin-left: 40%;
+       margin-top: -10%;
+        
+    }
+    .g1_img>img:nth-child(2){
+        position: inherit;
+        width: 40%;
+        margin-left: 50%;
+        margin-top: -10%;
+    }
+    .direction{
+        top: 9%;
+       left: 90%;
+    }
+    
+
+    /**/
+    .g2{
+        margin-top: 0;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .g2_content{
+        width: 51%;
+    }
+    .g2_img{
+        margin-top: 40px;
+    }
+    .g2_img>img{
+        width: 77%;
+    }
+    .g2_content p{
+        line-height: 30px;
+    }
+    .direc{
+        position: relative;
+        left: 93%;
+        top: 150px;
+    }
+
+    /**/
+    .nopo{
+       flex-direction: column-reverse;
+       align-items: flex-start;
+    }
+    .nopo_img{
+        width: 100%;
+    }
+    .nopo_content h3{
+        margin-bottom: 40px;
+    }
+    .nopo_content{
+        margin-left: 0;
+        margin-bottom: 40px;
+    }
+    .no_direc{
+        right: 30px;
+        top: 24%;
+    } 
+   
+
+    /**/
+    .f_logo{
+        width: 30.05%;
+    }
+    .f_right{
+        width: 31%;
+    }
+    .f_right>a{
+        font-size: 3.5rem;
+    }
+    .f_left>ul>li>a{
+        line-height: 45px;
+    }
+    .f_left>ul{
+        margin: 35px 0;
+    }
+
+    @media screen and (max-width:749px) {
+        .beer .content{
+            width: 65%;
+            font-size: 3.2rem;
+        }
+        .cake_content>h1{
+            font-size: 4rem;
+        }
+        .g2_content{
+            width: 55%;
+        }
+        .beer .beer_img{
+            width: 45.51%;
+        }
+    }
+
+    @media screen and (max-width:680px) {
+        header .left{
+            width: 50.51%;
+        }
+        .title>h1{
+            font-size: 4rem;
+        }
+        .title>h1>span{
+            font-size: 4rem;
+        }
+        #brand >p{
+            font-size: 1.7rem;
+        }
+        .beer .beer_img>img{
+            width: 80%;
+        }
+        .beer .beer_img{
+            width: 44.51%;
+        }
+        .beer .content{
+            font-size: 2.5rem;
+        }
+        .beer .content>span{
+            font-size: 3.3rem;
+        }
+
+        .b_box .slide .slide_box ul li img{
+            width: 65%;
+        }
+        .b_box .slide .slide_box ul li h1{
+            margin: 20px 0 ;
+        }
+        .arrow a.prev{
+            top: 35%;
+            left: 33px;
+        }
+        .arrow a.prev img{
+            width: 90%;
+        }
+        .cake_content {
+            width: 50.61%;
+        }
+        .cake_content>h1{
+            font-size: 4rem;
+        }
+        .g2_content{
+            width: 80%;
+        }
+        .direc {
+            left: 86%;
+        }
+        /**/
+        footer{
+            width: 83.79%;
+        }
+        .f_right{
+            width: 43%;
+        }
+    }
+
+    @media screen and (max-width:600px) {
+        .g1_img>img:nth-child(1){
+            width: 45%;
+            margin-left: 31%;
+            margin-top: 6%;
+        }
+        .g1_img>img:nth-child(2){
+            width: 44%;
+            margin-left: 55%;
+            margin-top: -5%;
+        }
+    }
+
+    @media screen and (max-width:528px) {
+        header .left{
+            width: 56.5%;
+        }
+        .title>h1{
+            font-size: 4rem;
+        }
+        .title>h1>span{
+            font-size: 4rem;
+        }
+        .title>h3{
+            font-size: 19.9rem;
+        }
+        #brand >p{
+            width: 104%;
+            font-size: 1.6rem;
+        }
+        /**/
+        .best_title>h1{
+            font-size: 7rem;
+        }
+        .beer{
+            width: 77%;
+        }
+        .beer .beer_img{
+            width: 28.51%;
+        }
+        .beer .beer_img>img{
+            width: 90%;
+        }
+        .beer .content{
+            width: 62%;
+            font-size: 2.5rem;
+        }
+        .beer .content>span{
+            font-size: 3rem;
+        }
+
+        .b_box .slide .slide_box ul li img{
+            width: 60%;
+        }
+        .b_box .slide .slide_box ul li h1{
+            margin: 20px 0 ;
+        }
+        .arrow a.prev{
+            top: 35%;
+            left: 75px;
+        }
+        .arrow a.prev img{
+            width: 80%;
+        }
+        .cake{
+            width: 83.79%;
+        }
+        .cake_content{
+            width: 53.61%;
+        }
+        .cake_content>h1{
+            font-size: 4rem;
+        }
+        /**/
+        
+        .g2_content{
+            width: 80%;
+        }
+        .direc {
+            left: 86%;
+        }
+        footer{
+            width: 83.79%;
+        }
+        .f_right{
+            width: 43%;
+        }
+    }
+
+    @media screen and (max-width:492px) {
+        .beer .content{
+            font-size: 2.3rem;
+        }
+        .f_right{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width:450px) {
+        header{
+            padding: 0 30px;
+        }
+        .logo a>img{
+            width: 100%;
+        }
+        .left .icon{
+            display: none;
+        }
+        /**/
+        .title>h3{
+            font-size: 16.9rem;
+        }
+        .title>h1{
+            font-size: 3.5rem;
+        }
+        .title>h1>span{
+            font-size: 3.5rem;
+        }
+        #brand >p br:nth-child(3){
+            display: none;
+        }
+        #brand >p br:nth-child(6){
+            display: none;
+        }
+        #brand >p{
+           line-height: 30px;
+           bottom: 30px;
+        }
+        .best_title>h1{
+            font-size: 7rem;
+        }
+        .beer{
+            flex-direction: column-reverse;
+            justify-content: center;
+            margin:  60px auto;
+        }
+        .beer .content{
+            line-height: 7rem;
+            font-size: 3rem;
+            margin-top: 57px;
+            width: 100%;
+        }
+        .beer .content span{
+            font-size: 3.2rem;
+        }
+    
+        .beer .beer_img{
+            width: 44.51%;
+        }
+        .b_box .slide .slide_box ul li img{
+            width: 50%;
+        }
+        .b_box .slide .slide_box ul li h1{
+            margin: 20px 0 ;
+        }
+        .arrow a.prev{
+            top: 35%;
+            left: 75px;
+        }
+        .arrow a.prev img{
+            width: 80%;
+        }
+        /**/
+        .cake_bg{
+            position: relative;
+        }
+    .cake{
+        flex-direction: column;
+        position: relative;
+        top: -18px; 
+    }
+    .cake_content{
+        margin-top: -4px;
+        width: 94%;
+    }
+    .cake_content>h1{
+        text-shadow: 2px -3px 0px #fff;
+    }
+    .cake_content .next{
+        width: 25%;
+        margin-left: 67.83%;
+        margin-top: 13px;
+    }
+    .cake_img{
+        width: 75.29%;
+    }
+   
+    .direction{
+        top: 19%;
+    }
+
+    /**/
+    
+    .g2_content{
+        width: 100%;
+    }
+    .g2_content p{
+        line-height: 30px;
+    }
+    .direc{
+        top: 82px;
+        left: 87%;
+        width: 80%;
+    }
+    .g2_img>img:last-child{
+        margin-left: 23.38%;
+    }
+    .no_direc{
+        right: 0;
+        top: 34px;
+    }
+    .nopo{
+        padding: 30px 0 75px 0;
+    }
+    .direc>a>img{
+        width: 13%;
+    }
+    .no_direc>img{
+        width: 84%;
+    }
+    /**/
+    .f_right{
+        display: none;
+    }
+    .f_left >p{
+        font-size: 1.4rem;
+        line-height: 25px;
+    }
+    }
+    @media screen and (max-width:407px) {
+        .beer{
+            flex-direction: column-reverse;
+            justify-content: center;
+            margin:  60px auto;
+        }
+        .beer .content{
+            line-height: 7rem;
+            font-size: 3rem;
+            margin-top: 57px;
+        }
+        .beer .content span{
+            font-size: 3.2rem;
+        }
+    
+        .beer .beer_img{
+            width: 44.51%;
+        }
+        /**/
+        .best > h3{
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 25px;
+        }
+        .arrow a.prev{
+            left: 18%;
+        }.b_box .slide .slide_box ul li img{
+            width: 70%;
+        }
+        }
+
+}
+
+/* mobile */
+@media screen and (max-width:400px){
+    *{
+        font-size: 6px;
+    }
+   
+    /**/
+    .logo a>img{
+        width: 100%;
+    }
+    .left .icon{
+        display: none;
+    }
+    .main>img{
+        width: 20.79%;
+        padding-top: 14px;
+    }
+    #brand{
+        height: auto;
+    }
+    #brand>img{
+        width: 50%;
+    }
+    #brand>p{
+        width: 103%;
+        line-height: 25px;
+        bottom: 0;
+    }
+   #brand >p br:nth-child(3){
+        display: none;
+    }
+    #brand >p br:nth-child(6){
+        display: none;
+    }
+
+    #brand>.title{
+        position: relative;
+    }
+    
+
+    .title>h3{
+        font-size: 17rem;
+    }
+    .title>h1{
+        font-size: 3.5rem;
+        position: absolute;
+        top: 0;
+        left: 5%;
+    }
+    .title>h1>span{
+        font-size: 3.5rem;
+    }
+
+    .title .b2{
+        margin-top: 145px;
+    }
+    .best_title>h1{
+        font-size: 6rem;
+        -webkit-text-stroke: 2px #006545;
+        text-shadow: 5px 1px 0px #006545;
+    }
+
+    /**/
+    .beer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin:  60px auto;
+    }
+    .beer .content{
+        line-height: 7rem;
+        font-size: 3rem;
+        margin-top: 57px;
+    }
+    .beer .content span{
+        font-size: 3.2rem;
+    }
+
+    .beer .beer_img{
+        width: 44.51%;
+    }
+
+    /**/
+    .best > h3{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    .arrow a.prev{
+        left: 18%;
+    }.b_box .slide .slide_box ul li img{
+        width: 60%;
+    }
+   
+    /**/
+    .cake{
+        flex-direction: column;
+        
+    }
+    .cake_content{
+        margin-top: 0;
+        width: 75%;
+    }
+    .cake_content>h1{
+        text-shadow: 2px -3px 0px #fff;
+    }
+    .cake_content .next{
+        width: 30%;
+        margin-left: 67.83%;
+        margin-top: 25px;
+    }
+    .cake_img{
+        width: 75.29%;
+    }
+
+    /**/
+   
+    .g1_content{
+        margin-top: 50px;
+    }
+    .direction{
+        top: 19%;
+    }
+
+    /**/
+    
+    .g2_content{
+        width: 100%;
+    }
+    .g2_content p{
+        line-height: 30px;
+    }
+    .direc{
+        top: 82px;
+        left: 87%;
+        width: 80%;
+    }
+    .g2_img>img:last-child{
+        margin-left: 23.38%;
+    }
+    .no_direc{
+        right: 0;
+        top: 0;
+    }
+    .nopo{
+        padding: 30px 0 75px 0;
+    }
+
+
+    /**/
+    footer{
+        padding: 20px 0;
+        width: 88%;
+    }
+    .f_logo{
+        width: 45%;
+    }
+    .f_left>p{
+        font-size: 0.9rem;
+        line-height: 25px;
+    }
+    .f_left>ul{
+        margin: 35px 0;
+    }
+    .f_left>ul>li>a{
+        line-height: 45px;
+    }
+    .f_right{
+        display: none;
+    }
+    @media screen and (max-width:360px) {
+        header {
+            padding: 0 10px;
+            height: 9.89%;
+        }
+        .logo a>img{
+            width: 90%;
+        }
+        .title>h1{
+            font-size: 3rem;
+        }
+        .title>h1>span{
+            font-size: 3rem;
+        }
+        #product{
+            height: 70vh;
+        }
+        #brand>p{
+            width: 89%;
+            font-size: 1.4rem;
+        }
+        #brand>p br:nth-child(4){
+            display: none;
+        }
+        .beer .content{
+            font-size: 3rem;
+            width: 105%;
+        }
+        .beer .content>span{
+            font-size: 3.5rem;
+          
+        }
+    }
+    @media screen and (max-width:309px) {
+        .title>h1{
+            font-size: 2.5rem;
+        }
+        .title>h1>span{
+            font-size: 2.5rem;
+        }
+        #product{
+            height: 70vh;
+        }
+        #brand>p{
+            width: 104%;
+            font-size: 1.4rem;
+        }
+        #brand>p br{
+            display: none;
+        }
+        .beer .content{
+            font-size: 2.5rem;
+            width: 113%;
+        }
+        .beer .content>span{
+            font-size: 3rem;
+        }
+        .arrow a.prev{
+            left: 23%;
+        }
+        .b_box .slide .slide_box ul li img{
+            width: 50%;
+        }
+        .b_box .slide .slide_box ul li h1{
+            font-size: 3rem;
+        }
+        .cake_content{
+            width: 80%;
+        }
+        .cake_bg{
+            height: 60vh;
+        }
+    }
+}
+
+
+ 

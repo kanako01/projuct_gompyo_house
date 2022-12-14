@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            padding: 30px;
+        }
+
+        li img {
+            width: 300px;
+            user-select: none;
+        }
+
+        li i.fa {
+            font-size: 30px;
+            color: #f00;
+            transform: translate(20px, -50px);
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/3d60b45335.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li><img src="img1.png" alt="/"><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><img src="img2.png" alt="/"><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><img src="img3.png" alt="/"><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+            <li><img src="img4.png" alt="/"><i class="fa fa-heart-o" aria-hidden="true"></i></li>
+        </ul>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let items = document.querySelectorAll("ul li i");
+            // items 가 배열이라 for문으로 이벤트 추가
+            for (let i = 0; i < items.length; i++) {
+                items.item(i).addEventListener("click", function () {
+                    changeHeart(this);
+                });
+            }
+
+            const changeHeart = function (thisItem) { // 하트가 체크 되었는지 아닌지에 따라 다른 동작하도록
+                const classLength = thisItem.classList.length; // for문 작업을 위해 요소의 class 갯수을 저장
+                for (let i = 0; i < classLength; i++) {
+                    //console.log(thisItem.classList.item(i));
+                    if (thisItem.classList.item(i) == 'fa-heart') {
+                        thisItem.classList.add('fa-heart-o');
+                        thisItem.classList.remove('fa-heart');
+                    }
+                    else if (thisItem.classList.item(i) == 'fa-heart-o') {
+                        thisItem.classList.add('fa-heart');
+                        thisItem.classList.remove('fa-heart-o');
+                    }
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>

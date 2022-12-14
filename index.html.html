@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>메인페이지</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="font_aos/aos.css">
+  <script src="https://kit.fontawesome.com/d2d4546655.js" crossorigin="anonymous"></script>
+  <script src="js/jquery-3.6.1.min.js"></script>
+  <script src="font_aos/aos.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+   $(function(){  
+
+    $('.ham').click(function(){
+      $(".ham_menu").stop(true).animate({right:'0'})
+    });
+
+    $(".ham_menu i").click(function(){
+      $(".ham_menu").stop(true).animate({right:'-60%'})
+    });
+});
+    // $(".arrow").click(function(){
+    //   event.preventDefault();
+    //   $(".slide_box>ul").stop(true).animate({marginLeft:'-500px'},1000,function(){
+    //     $('.slide_box>ul>li:first-child').insertAfter('.slide_box>ul>li:last-child')
+    //   });
+    // });
+   
+
+//    let sliderWrap = document.getElementById('slide');
+//    let slideIndex = 0;
+//    let slides = document.querySelectorAll('.slide ul li');
+//    let totalSlide = slides.length;
+//    let slideWidth = sliderWrap.clientWidth;
+   
+//    slides.forEach(function(element) {
+//     element.style.width = slideWidth + 'px'; 
+//    });
+
+//    let slider = document.querySelector('.slide ul');
+//    slider.style.width = slideWidth * totalSlide + 'px'
+
+//    let btn = document.getElementById('arrow');
+//    btn.addEventListener('click',function(){
+//     event.preventDefault();
+//     plusSlides(1);
+//    });
+
+//    function plusSlides(n) {
+//     showSlides(slideIndex += n);
+// }
+
+// function showSlides(n) {
+//     slideIndex = n;
+//     if (slideIndex == -1) {
+//         slideIndex = totalSlide - 1;
+//     } else if (slideIndex === totalSlide) {
+//         slideIndex = 0;
+//     }
+
+//     slider.style.left = -(sliderWidth * slideIndex) + 'px';
+//     // pagination();
+// }
+
+  
+  </script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="ham_menu">
+        <i class="fa-solid fa-x"></i>   
+      <ul>
+        <li><a href="sub_01(곰표이야기).html.html">곰표이야기</a></li>
+        <li><a href="sub_02(곰표발자취).html.html">곰표발자취</a></li>
+        <li><a href="sub_03(제품관).html.html">제품관</a></li>
+        <li><a href="sub_04(갓빵집).html.html">갓빵집</a></li>
+      </ul>
+    </div>
+    <!-- header -->
+    <header>
+      <div class="left">
+        <div class="logo">
+          <a href="index.html.html"><img src="img/main/logo.png" alt="/" /></a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="img/main/알림.png" alt="/">
+            <span>알림</span>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="img/main/마이페이지.png" alt="/">
+            <span>로그인</span>
+          </a>
+        </div>
+        <div class="icon">
+          <a href="#">
+            <img src="img/main/장바구니.png" alt="/">
+            <span>장바구니</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="right">
+        <ul>
+          <li><a href="sub_01(곰표이야기).html.html">곰표이야기</a></li>
+          <li><a href="sub_02(곰표발자취).html.html">곰표발자취</a></li>
+          <li><a href="sub_03(제품관).html.html">제품관</a></li>
+          <li><a href="sub_04(갓빵집).html.html">갓빵집</a></li>
+          <li><a href="#"><img src="img/main/패스 5.png" alt="/" /></a></li>
+        </ul>
+      </div>
+
+      <div class="ham">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+      </div>
+
+    </header>
+    <!-- //header -->
+
+    <!-- main -->
+    <div class="main">
+      <img src="img/main/메인.png" alt="/" data-aos="fade-down" data-aos-duration="3000">
+      <div class="line">
+        <img src="img/main/사각형 1 복사 12.png" alt="/" />
+        <img src="img/main/사각형 1 복사 12.png" alt="/" />
+      </div>
+    </div>
+    <!-- //main -->
+
+    <!-- brand -->
+    <div id="brand">
+      <img src="img/main/브랜드이야기.png" alt="/" />
+
+      <div class="title" data-aos="fade-up" data-aos-duration="3000" data-aos-offset="300">
+        <h3 class="b1">"</h3>
+        <h1>
+          엄마,우리집도 어렸을 때 <br />
+          <span>곰표 밀가루</span> 많이 먹었어요?
+        </h1>
+        <h3 class="b2">"</h3>
+      </div>
+      <p>
+        곰표 하우스는 여전히 사랑 받는, 살아있는 레트로 그 자체인 '곰표
+        밀가루'의 감성을 모던하고 FUN하게 재해석한 온라인 플래그십
+        공간입니다.<br />
+        곰표의 역사는 1952년에 시작되어 우리 부모님 세대와 같이 70여년을
+        한결 같이 성장해왔습니다.<br />
+        어린 시절을 잘 기억해 보세요. 쫀득한 수제비 한 그릇부터 고슬 고슬한
+        라면에,<br />
+        비오는 날 고소한 기름에 지지던 어머니의 김치전.<br />
+        곰표 밀가루는 한국인의 DNA라고 불리어도 될만큼 따뜻한 일상 그
+        자체였을지 모릅니다.<br />
+        이제 부모님 세대와 함께 그 기억과 감성을 나눌 수 있는 자리를
+        마련해드리고 싶었습니다.<br />
+        바로 이 레트로라는 연결고리로 말이지요.<br /><br />
+
+        곰표 밀가루를 시작했을 때의 마음처럼 여러분에게 많은 것을 손에 닿게
+        나누어드리고 싶습니다.<br />
+        두손 듬뿍 받으셔서 집에 가서 말해보세요.
+      </p>
+
+    </div>
+    <!-- //brand -->
+
+    <!-- beer -->
+    <div class="beer">
+      <div class="content">
+        우리에게 다양한 먹거리를 제공하던<br />
+        <span>뽀얀 곰표 밀가루는</span><br />
+        새로운 가능성을 통해<br />
+        <span>멋지게</span><br />
+        다시 태어났습니다.
+      </div>
+      <div class="beer_img" data-aos="zoom-in-up" data-aos-duration="900">
+        <img src="img/main/왼쪽.png" alt="/" />
+        <img src="img/main/왼쪽.png" alt="/" />
+        <img src="img/main/왼쪽.png" alt="/" />
+      </div>
+    </div>
+    <!-- beer -->
+
+    <!-- product -->
+    <div id="product">
+      <!-- best -->
+      <div class="best">
+        <h3>PRODUCT</h3>
+        <div class="b_box">
+          <div class="slide">
+            <div class="slide_box">
+              <ul>
+                <li>
+                  <img src="img/main/오징어칩.png" alt="/">
+                  <h1>곰표 후라이드 오징어튀김</h1>
+                </li>
+                <li>
+                  <img src="img/main/곰밀눈쉐이크.png" alt="/">
+                  <h1>곰표 밀눈 쉐이크</h1>
+                </li>
+                <li>
+                  <img src="img/main/통밀도너츠.png" alt="/">
+                  <h1>곰표 통밀 도너츠</h1>
+                </li>
+                <li>
+                  <img src="img/main/나쵸.png" alt="/">
+                  <h1>곰표 나쵸</h1>
+                </li>
+              </ul>
+            </div>
+            <div class="arrow">
+              <a href="#" class="prev"><img src="img/main/왼화살표.png" alt="/"></a>
+            </div>
+          </div>
+          <div class="best_title">
+            <h1>BEST SELLER</h1>
+            <h3>곰표 제품관</h3>
+            <p>많은 곰표러들이 선택한 베스트 제품<br/>
+              지금 만나보세요 !</p>
+            <button type="button">MORE</button>
+          </div>
+          <!-- <div class="slide">
+            <div class="slide_box">
+              <ul class="slider">
+                <li><img src="img/main/곰밀눈쉐이크.png" alt="/"></li>
+                <li><img src="img/main/오징어칩.png" alt="/"></li>
+                <li><img src="img/main/통밀도너츠.png" alt="/"></li>
+                <li><img src="img/main/나쵸.png" alt="/"></li>
+              </ul>
+            </div>
+            <div class="arrow">
+              <a href="#" class="prev"><img src="img/main/왼화살표.png" alt="/"></a>
+            </div>
+          </div>
+
+          <div class="best_content">
+            <p>곰표 제품관</p>
+            <div class="h1_box">
+              <ul>
+                <li><h1>곰표 후라이드 오징어튀김</h1></li>
+                <li><h1>곰표 밀눈쉐이크</h1></li>
+                <li><h1>곰표 나쵸</h1></li>
+                <li><h1>곰표 통밀도너츠</h1></li>
+              </ul>
+            </div> -->
+            <!-- <button type="button">MORE</button> -->
+          </div>
+        </div>
+      </div>
+      <!-- best -->
+
+      <!-- cake -->
+      <div class="cake_bg">
+        <div class="cake">
+          <div class="cake_img" data-aos="fade-up-right" data-aos-duration="1500">
+            <img src="img/main/케이크.png" alt="/" class="c1">
+          </div>
+          <div class="cake_content">
+            <div class="line"></div>
+            <h1>
+              널 위해 준비했곰<br />
+              맛있는 곰표케이크
+            </h1>
+            <div class="line"></div>
+            <img src="img/main/오른화살표.png" alt="/" class="next">
+          </div>
+        </div>
+      </div>
+      <!-- cake -->
+
+    
+    <!-- //product -->
+
+
+
+    <!-- section -->
+    <section>
+      <!-- 갓빵집 -->
+      <div class="god">
+        <div class="box" id="first">
+          <h1>#갓빵집</h1>
+          <hr>
+        </div>
+        <div class="g1">
+          <div class="g1_content">
+            <h1>갸또마마</h1>
+            <h3>#갓빵집</h3>
+            <p>"올리브빵, 맘모스빵 <br />
+              나만 알고싶은 명인동 빵 맛집"</p>
+          </div>
+          <div class="g1_img">
+            <img src="img/main/갸또마마.png" alt="/" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="90">
+            <img src="img/main/갸또마마1.png" alt="/" data-aos="fade-up" data-aos-duration="1000" data-aos-offset="90">
+          </div>
+          <div class="direction">
+            <img src="img/main/방향오른쪽향함.png" alt="/" >
+          </div>
+        </div>
+        <div class="g2">
+          <div class="g2_img">
+            <img src="img/main/갓빵집.png" alt="/" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="img/main/갓빵집2.png" alt="/" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="200">
+          </div>
+          <div class="g2_content">
+            <h1>라루트뒤땅</h1>
+            <h3>#갓빵집</h3>
+            <p>가치있는 발효 시간의 길, 굽은다리 천연발효종 빵집<br /><br />
+
+              '시간의 길'이라는 프랑스 말로 제품이 나오기까지<br />
+              다소 느리지만 가치있는 발효시간의 중요성을 강조하였습니다.</p>
+          </div>
+          <div class="direc">
+            <a href="#">
+              <img src="img/main/방향오른쪽향함.png" alt="/" >
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <h1 class="b2">#곰표가 사랑한 노포</h1>
+          <hr />
+        </div>
+      </div>
+      <!-- //갓빵집 -->
+
+      <!-- 노포 -->
+
+      <div class="nopo">
+        <div class="nopo_img" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="1000">
+          <img src="img/main/대동집.jpg" alt="/">
+        </div>
+        <div class="nopo_content">
+          <h1>대동문</h1>
+          <h3>#2대째 운영중인 33년<br />
+            전통 평양음식 전문점</h3>
+          <p>평양의 국보 제 1호 '대동문'<br />
+            여의도에도 대동문이 있다?<br />
+            2대째 내려오는 평양음식 전문점 '대동문'</p>
+        </div>
+        <div class="no_direc">
+          <img src="img/main/방향오른쪽향함.png" alt="/">
+        </div>
+      </div>
+      <!-- //노포 -->
+
+    </section>
+    <!-- section -->
+
+
+
+    <!-- footer -->
+    <footer>
+      <div class="f_left">
+        <a href="/index.html.html"><img src="img/main/flogo.png" alt="/" class="f_logo"></a>
+        <ul>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">이용안내</a></li>
+        </ul>
+        <p>고객센터<br />
+          080-330-3377<br />
+          운영시간 : 평일 10:00 ~ 17:30 (토/일/공휴일 휴무) 점심시간 11:30 ~ 13:00<br />
+          마케팅제휴문의 : mkt@dhflour.co.kr<br />
+          대한제분(주)<br />
+          상호 : 대한제분(주)쇼핑몰명 : 곰표하우스사업자등록번호 : 104-81-04345 대표이사 : 송인석<br />
+          <br />
+          사업자소재지 : 서울특별시 중구 세종대로 39, 대한서울상공회의소 14층(남대문로4가) (우)04513통신판매업신고 : 2021-서울중구-0940호개인정보관리담당자 : 배연진<br />
+          <br />
+          COPYRIGHTS © 2019 GOMPYO ALL RIGHTS RESERVED
+        </p>
+      </div>
+      <div class="f_right">
+        <a href="sub_01(곰표이야기).html.html">곰표이야기</a>
+        <a href="sub_02(곰표발자취).html.html">곰표발자취</a>
+        <a href="sub_03(제품관).html.html">제품관</a>
+        <a href="sub_04(갓빵집).html.html">갓빵집</a>
+      </div>
+    </footer>
+    <!-- //footer -->
+  </div>
+</div>
+
+  <script>
+    AOS.init();
+
+   
+  //   window.onload = function() {
+  //   const kWrap =  document.querySelector('.b_box');
+  //   const slider = document.querySelector('.slide_box>ul');
+  //   const slideLis = slider.querySelectorAll('li')
+  //   const moveButton = kindWrap.querySelector('.arrow');
+
+  //   /* 클론 */
+  //   const clone1 = slideLis[0].cloneNode(true);
+  //   const cloneLast = slideLis[slideLis.length - 1].cloneNode(true);
+  //   slider.insertBefore(cloneLast, slideLis[0]); //(삽입할노드,기준점)
+  //   slider.appendChild(clone1); //자식노드추가한것임
+
+  //   /* 주요 변수 초기화 */  
+  //   let currentIdx = 0;
+  //   let translate = 0;
+  //   const speedTime = 500;
+
+  //   /* CSSOM 셋업 */
+  //   const sliderCloneLis = slider.querySelectorAll('li');
+  //   const liWidth = slideLis[0].clientWidth; //border,margin값뺴고 안에 padding 값만 포함한 넓이
+  //   const sliderWidth = liWidth * sliderCloneLis.length; //안넓이*li의 갯수 4
+  //   slider.style.width = `${sliderWidth}px`; //총길이
+  //   currentIdx = 1;
+  //   translate = -liWidth; //위치
+  //   slider.style.transform = `translateX(${translate}px)`
+
+  //   /* 리스너 설치하기 */
+  //   moveButton.addEventListener('click', moveSlide , function(){
+  //     this.className.add('active');
+  //   });
+
+  //   /* 슬라이드 실행 */
+  //   function move(D) {
+  //     currentIdx += (-1 * D); //?
+  //     translate += liWidth * D;
+  //     slider.style.transform = `translateX(${translate}px)`;
+  //     slider.style.transition = `all ${speedTime}ms ease`
+  //   }
+
+    
+  //   // const h1B = document.querySelector('.h1_box');
+  //   // const h1U = h1B.querySelector('ul');
+
+   
+      
+  //   /* 클릭 버튼 */
+  //   function moveSlide(event) {
+  //     event.preventDefault(); //a태그 클릭시 이동/창새로고침 막아줌
+  //     if (event.target.className === 'next') { //?
+  //       move(-1);
+        
+  //       if (currentIdx === sliderCloneLis.length -1) //1이 li의 순번째(0시작)랑 같아지면
+  //         setTimeout(() => {
+  //           slider.style.transition = 'none';
+  //           currentIdx = 1;
+  //           translate = -liWidth;
+  //           slider.style.transform = `translateX(${translate}px)`; //역순
+
+  //         }, speedTime);
+  //     } else {
+  //         move(1);
+  //         if (currentIdx === 0) {
+  //           setTimeout(() => {
+  //             slider.style.transition = 'none';
+  //             currentIdx = sliderCloneLis.length -2; //??
+  //             translate = -(liWidth * currentIdx);
+  //             slider.style.transform = `translateX(${translate}px)`;
+  //           }, speedTime);
+  //         }
+  //       }
+
+      
+            
+  //       // h1U.classList.add('active');
+  //   }
+  // }
+  </script>
+</body>
+
+</html>
+
+<!-- $('button').click(function(){
+  $('.h1_box ul').stop().animate({marginTop:'98px'},1000,function(){
+    $('.h1_box li:first-child').insertAfter('.h1_box li:last-child');
+    $("ul").css({marginTop:'-0px'});
+  });
+}); -->

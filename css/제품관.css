@@ -1,0 +1,827 @@
+@font-face {
+    font-family: "Gom_bold";
+    src: url("../font_aos/Gom_bold.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 
+반응형 퍼센트 구하기 :
+
+자식태그(px) / 부모태그(px) = 결과값
+결과값 * 100 = %(퍼센트)
+
+*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+body{
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* header */
+#wrap{
+    width: 100vw; 
+    height: 100vh;
+    margin: auto;
+    position: relative;
+}
+header{
+    width: 75.79%; /*1440/1900*100 */
+    min-width: 1000px;
+    height: 13.89%; /*150*/
+    overflow: hidden;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+header .left{
+   width: 32.5%; /*465*/
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+header .icon {
+    text-align: center;
+}
+header .icon>a>img{
+    display: block;
+    margin: auto;
+    margin-bottom: 6px;
+}
+header .icon>a>span{
+    color: #006545;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+header .right{
+    width: 54.62%; /*700*/
+    min-width: 600px;
+}
+header .right ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .right ul>li>a{
+    font-size: 3rem;
+    font-family: "Gom_bold";
+    display: block;
+    text-align: center;
+}
+header .right ul>li>a:hover{
+    color: #006545;
+}
+header .ham{
+    display: none;
+}
+.ham_menu{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.932);
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    right: -60%;
+    z-index: 99;
+    
+}
+.ham_menu i{
+    font-size: 50px;
+    transform: translate(80%,50px);
+    cursor: pointer;
+}
+
+.ham_menu ul{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 98px;
+}
+.ham_menu ul li{
+ display: block;
+ line-height: 80px;
+ font-weight: 700;
+}
+.ham_menu ul li a{
+    font-size: 4.2rem;
+    font-family: "Gom_bold";
+}
+.ham_menu.on{
+    right: 0;
+    transition: 0.5s;
+}
+.ham_menu.off{
+    right: -60%;
+    transition: 0.5s;
+}
+.ham_menu .fa-x{
+    color: #000;
+}
+
+/*굿즈전시관*/
+#goods{
+    width: 75.79%;
+    margin: auto;
+    margin-bottom: 280px;
+}
+#goods>img{
+    margin: auto;
+    margin-top: 107px;
+}
+#goods>a{
+    text-align: center;
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 167px;
+}
+#goods>a:hover{
+    color: #006545;
+}
+.g_box{
+    margin-top: 192px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.g_box>.g1,.g2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.g_box>.g1{
+    margin-bottom: 20px;
+}
+.box{
+    text-align: center;
+}
+.box>.title>img{
+    float: right;
+   display: block;
+}
+.box>.title>p{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;  
+    margin-top: 30px;
+}
+.fa-heart{
+    font-size: 3.5rem;
+    /* position: relative;
+    left: 150px; */
+    transform: translate(150px, 0px);
+    cursor: pointer;
+}
+.fa-solid{
+    color: rgb(232, 19, 19);
+}
+
+
+/* best pro*/
+#product1{
+    width: 75.79%;
+    margin: auto;
+}
+#product1>h1{
+    font-size: 6.1rem;
+    font-family: "Gom_bold";
+    color: #fff;
+    -webkit-text-stroke: 3px #006545;
+    -webkit-text-fill-color: #fff;
+    text-shadow: 7px 1px 0px #006545;
+    text-align: center;
+    margin-bottom: 77px;
+}
+.b_box{
+    width: 83.33%; /*1200*/
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 111px;
+}
+.main{
+    text-align: center;
+}
+.main:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+.main>h3{
+    font-size: 2.4rem;
+}
+.b_box>button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0 5%;
+}
+.b_box>button:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+.b_box .img1{
+    height: 296px;
+}
+.b_box .img2{
+    height: 237px;
+}
+#product1>.input{
+    width: 44.93%; /*647*/
+    text-align: center;
+    margin: auto;
+    position: relative;
+    margin-bottom: 196px;
+}
+#product1>.input>input[type="text"]{
+    width: 100%;
+    height: 80px;
+    border-bottom: 5px solid #707070;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 30px;
+}
+.input>input[type="text"]:focus{
+    outline: none;
+}
+#product1>.input>a>img{
+    float: right;
+    position: relative;
+    top: -70px;
+}
+
+/* product2 */
+.title>h3{
+    font-size: 2rem;
+}
+.product2{
+    width: 75.79%;
+    margin: auto;
+}
+.product2>.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 200px;
+}
+.product2>.line>p{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #000;
+}
+.product2>.line>select{
+    border: none;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.product2>.line>select>option{
+    font-size: 2rem;
+    text-align: center;
+}
+.p_box{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px ;
+    box-sizing: border-box;
+    margin-bottom: 230px;
+}
+.p_box>.p1,.p2{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.p_box>.p1{
+    margin-bottom: 100px;
+}
+.p_box .box{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+.p_box .box>h3{
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 30px 0 40px 0;
+    display: block;
+}
+.p_box .box>p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: block;
+}
+.number_box{
+    width: 14.53%; /*276*/
+    height: 50px;
+    margin: auto;
+    margin-bottom: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.number_box>button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.num{
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+#first{
+    width: 13.04%; /*36*/
+    height: 36px;
+    background-color: #707070;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 36px;
+}
+
+
+/* footer */
+footer{
+    width: 75.79%;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 20px;
+    padding-top: 53px;
+    display: flex;
+    justify-content: space-between;
+}
+.f_logo{
+    width: 14.03%;
+    
+}
+.f_left>ul{
+    margin: 49px 0 58px 0;
+}
+.f_left>ul>li>a{
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 60px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+}
+.f_left >p{
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.f_right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.f_right>a{
+    font-size: 4.2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 88px;
+}
+
+
+
+/* 반응형 */
+
+/* pc */
+@media screen and (min-width:1023px) and (max-width:1204px) {
+    /**/
+    header .left{
+       width: 33.5%;
+   }
+   header .left .logo{
+       width: 45%;
+   }
+   header .right ul>li>a{
+       font-size: 2.5rem;
+   }
+   header .right{
+       width: 55.63%;
+       min-width: 554px;
+   }
+}
+
+/* 테블릿 */
+@media screen and (min-width:767px) and (max-width:1023px){
+    *{
+        font-size: 8px;
+    }
+
+    header{
+        min-width: 768px;
+    }
+    
+    header .left{
+        width: 36.5%;
+    }
+    header .left .logo{
+        width: 45%;
+    }
+    header .left .icon>a>img{
+        width: 74%;
+    }
+    header .right{
+        width: 56.62%;
+        min-width: 400px;
+    }
+    header .right ul>li>a{
+        font-size: 2.5rem;
+    }
+   
+
+    /*굿즈*/
+    .g1 .box{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2%;
+    }
+    .g2 .box{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2%;
+    }
+    .g_box>.g1{
+        margin-bottom: 40px;
+    }
+    .g1 .box>img{
+        width: 80%;
+        align-self: center;
+    }
+    .g2 .box>img{
+        width: 80%;
+        align-self: center;
+    }
+    .box .title>img{
+        width: 10%;
+    }
+   
+
+    /*best*/
+    .b_box{
+        width: 100%;
+    }
+    .b_box .img1{
+        height: 220px;
+    }
+    .b_box .img2{
+        height: 200px;
+    }
+    .main>h3{
+        font-size: 2.4rem;
+    }
+    
+
+    /**/
+    .b_box>button{
+        padding: 0 2%;
+    }
+    .product2>.line>p{
+        font-size: 3.7rem;
+    }
+    .product2>.line>select{
+        font-size: 3.7rem;
+    }
+    .p_box{
+        padding: 0;
+    }
+   .p1 .box>img{
+    width: 80%;
+   }
+
+    /**/
+    .number_box {
+        width: 28.53%;
+    }
+    #product1>.input>input[type="text"]{
+        height: 60px;
+        font-size: 20px;
+    }
+    #product1>.input>a>img{
+        width: 10%;
+        top: -53px;
+    }
+
+    /**/
+    .f_logo{
+        width: 30.05%;
+    }
+    .f_right{
+        width: 31%;
+    }
+    .f_right>a{
+        font-size: 3.5rem;
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:767px){
+    /**/
+    *{
+        font-size: 6px;
+    }
+    header .icon>a>img{
+        width: 80%;
+    }
+    header{
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    header .left{
+        width: 43.5%;
+    }
+    
+    header .right{
+        display: none;
+    }
+    header .ham{
+        display: block;
+        width: 45px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    header .ham .box1,.box2,.box3{
+        width: 45px;
+        height: 5px;
+        background-color: #006545;
+    }
+    
+
+    /**/
+    #goods{
+        width: 85%;
+    }
+    #goods>img{
+        width: 50%;
+    }
+    .g1 .box{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2%;
+    }
+    .g2{
+        margin-top: 30px;
+    }
+    .g2 .box{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2%;
+    }
+    .g1 .box>img{
+        width: 100%;
+        align-self: center;
+    }
+    .g2 .box>img{
+        width: 100%;
+        align-self: center;
+    }
+    .box .title>img{
+        width: 10%;
+    }
+   
+    /**/
+    #product1>h1{
+    font-size: 6.1rem;
+    -webkit-text-stroke: 2px #006545;
+    text-shadow: 5px 1px 0px #006545;
+   }
+   .b_box{
+    width: 100%;
+    }
+    .b_box .img1{
+        height: 150px;
+    }
+    .b_box .img2{
+        height: 150px;
+    }
+    .main>h3{
+        font-size: 2.4rem;
+    }
+    .b_box>button{
+        padding: 0 2%;
+    }
+    .main>h3{
+        font-size: 3rem;
+    }
+    #product1>.input>a>img{
+        width: 20%;
+    }
+    /**/
+    .p_box{
+        padding: 0;
+    }
+    .p1 .box>img{
+        width: 80%;
+       }
+
+     /**/
+     #product1>.input{
+        width: 55.93%;
+     }
+     #product1>.input>input[type="text"]{
+        height: 60px;
+        font-size: 15px;
+    }
+    #product1>.input>a>img{
+        width: 11%;
+        top: -53px;
+    }
+     .number_box {
+        width: 39.53%;
+    }
+
+    /**/
+    .f_logo{
+        width: 30.05%;
+    }
+    .f_right{
+        display: none;
+    }
+    .f_left>ul>li>a{
+        line-height: 45px;
+    }
+    .f_left>ul{
+        margin: 35px 0;
+    }
+
+    @media screen and (max-width:680px) {
+        header .left{
+            width: 50.51%;
+        }
+        /**/
+        footer{
+            width: 83.79%;
+        }
+        .f_right{
+            width: 43%;
+        }
+    }
+    @media screen and (max-width:528px) {
+        header .left{
+            width: 56.51%;
+        }
+        footer{
+            width: 83.79%;
+        }
+        .f_right{
+            width: 43%;
+        }
+    }
+    @media screen and (max-width:450px) {
+        header{
+            padding: 0 30px;
+        }
+        .logo a>img{
+            width: 100%;
+        }
+        .left .icon{
+            display: none;
+        }
+         /**/
+        .f_right{
+            display: none;
+        }
+        .f_left >p{
+            font-size: 1.4rem;
+            line-height: 25px;
+        }
+    }
+    
+}
+
+/* mobile */
+@media screen and (max-width:400px){
+    *{
+        font-size: 6px;
+    }
+    
+    /**/
+    .logo a>img{
+        width: 100%;
+    }
+    .left .icon{
+        display: none;
+    }
+    
+
+   
+    /**/
+    #goods{
+        width: 92%;
+    }
+    #goods>a{
+        margin-top: 70px;
+    }
+
+    .b_box{
+        width: 100%;
+    }
+    .b_box .img1{
+        display: none;    
+    }
+    .b_box .img2{
+        display: none;
+    }
+    
+    .main>h3{
+        font-size: 2.4rem;
+    }
+    #product1>.input{
+        width: 75%;
+    }
+
+    /**/
+    .p_box>.p1{
+        margin-bottom: 0px;
+    }
+    .p_box>.p1, .p2{
+        flex-wrap: wrap;
+    }
+    .p1>.box, .p2>.box{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+    #product1>.input>input[type="text"]{
+        height: 60px;
+        font-size: 13px;
+    }
+    #product1>.input>a>img{
+        width: 16%;
+        top: -53px;
+    }
+
+
+     /**/
+     .title h3{
+        font-size: 1.5rem;
+     }
+     .p_box .box>h3{
+        font-size: 1.5rem;
+     }
+     .number_box {
+        width: 70%;
+    }
+
+    /**/
+    footer{
+        padding: 20px 0;
+        width: 88%;
+    }
+    .f_logo{
+        width: 45%;
+    }
+    .f_left>p{
+        font-size: 0.9rem;
+        line-height: 25px;
+    }
+    .f_left>ul{
+        margin: 35px 0;
+    }
+    .f_left>ul>li>a{
+        line-height: 45px;
+    }
+    .f_right{
+        display: none;
+    }
+}
+
+
+ 

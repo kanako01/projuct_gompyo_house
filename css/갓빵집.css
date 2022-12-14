@@ -1,0 +1,885 @@
+@font-face {
+    font-family: "Gom_bold";
+    src: url("../font_aos/Gom_bold.ttf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 
+반응형 퍼센트 구하기 :
+
+자식태그(px) / 부모태그(px) = 결과값
+결과값 * 100 = %(퍼센트)
+
+*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+body{
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* header */
+#wrap{
+    width: 100vw; 
+    height: 100vh;
+    margin: auto;
+}
+header{
+    width: 75.79%; /*1440/1900*100 */
+    min-width: 1000px;
+    height: 13.89%; /*150*/
+    overflow: hidden;
+    margin: auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+header .left{
+   width: 32.5%; /*465*/
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
+header .icon {
+    text-align: center;
+}
+header .icon>a>img{
+    display: block;
+    margin: auto;
+    margin-bottom: 6px;
+}
+header .icon>a>span{
+    color: #006545;
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+header .right{
+    width: 54.62%; /*700*/
+    min-width: 600px;
+}
+header .right ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header .right ul>li>a{
+    font-size: 3rem;
+    font-family: "Gom_bold";
+    display: block;
+    text-align: center;
+}
+header .right ul>li>a:hover{
+    color: #006545;
+}
+header .ham{
+    display: none;
+}
+.ham_menu{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.932);
+    width: 60%;
+    height: 100vh;
+    top: 0;
+    right: -60%;
+    z-index: 99;
+    
+}
+.ham_menu i{
+    font-size: 50px;
+    transform: translate(80%,50px);
+    cursor: pointer;
+}
+
+.ham_menu ul{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 98px;
+}
+.ham_menu ul li{
+ display: block;
+ line-height: 80px;
+ font-weight: 700;
+}
+.ham_menu ul li a{
+    font-size: 4.2rem;
+    font-family: "Gom_bold";
+}
+.ham_menu.on{
+    right: 0;
+    transition: 0.5s;
+}
+.ham_menu.off{
+    right: -60%;
+    transition: 0.5s;
+}
+.ham_menu .fa-x{
+    color: #000;
+}
+
+
+
+/* main */
+.main{
+    width: 75.79%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main>h1{
+ text-align: center;
+ margin-top: 107px;
+ margin-bottom: 79px;
+ font-size: 4.5rem;
+ font-family: "Gom_bold";
+ color: #000;
+
+}
+.main>img{
+    margin: auto;
+    margin-bottom: 75px;
+}
+.main>p{
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 75px;
+}
+.input{
+    width: 44.93%; /*647*/
+    text-align: center;
+    margin: auto;
+    position: relative;  
+}
+.input>input[type="text"]{
+    width: 100%;
+    height: 80px;
+    border-bottom: 5px solid #707070;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 30px;
+}
+.input>input[type="text"]:focus{
+    outline: none;
+}
+.input>a>img{
+    float: right;
+    position: relative;
+    top: -70px;
+}
+.sns{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 107px;
+}
+.sns>img:first-child{
+    margin-right: 30px;
+}
+.sns>a{
+    font-size: 4.5rem;
+    font-family: "Gom_bold";
+    margin-left: 60px;
+}
+.sns>a:hover{
+    color: #006545;
+}
+
+
+/* bread*/
+.bread{
+    width: 75.79%;
+    overflow: hidden;
+    margin: auto;
+}
+.line{
+    width: 9.79%; /*141*/
+    height: 10px;
+    background-color: #006545;
+}
+.bread>h1{
+    font-size: 5.5rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 75px;
+}
+.b_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.b1,.b2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.b1{
+    margin-bottom: 50px;
+}
+.b_box .box{
+    width: 23.89%; /*344*/
+    height: 456px;
+    border: 1px solid #ECECEC;
+    box-shadow: 5px 10px 15px #ECECEC;
+    padding: 24px 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+.b_box .box:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+.b_box .box>img.hrt{
+  display:block;
+   position: relative;
+   top: 10px;
+   left: 270px;
+}
+.b_box .box>.con{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.b_box .box>.con>h3{
+    font-size: 1.7rem;
+}
+.b_box .box>.con>h3>span{
+    font-size: 1.3rem;
+    color: #BAB4B4;
+}
+.b_box .box>.con>.tag{
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.tag>p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #5F5C5C;
+    margin-left: 10px;
+}
+.bread>a{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    display: block;
+    margin: 150px 0;
+}
+.bread>a:hover{
+    color: #006545;
+}
+
+
+
+/* section */
+.title_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 94px;
+}
+.title_box>h1{
+    font-size: 4.5rem;
+    font-family: "Gom_bold";
+    color: #000;
+}
+.title_box>img{
+    margin: 50px 0 133px 0 ;
+}
+.title_box>p{
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 40px;
+}
+.title_box .line{
+    margin: 95px auto 118px auto;
+}
+section{
+    width: 75.79%;
+    margin: auto;
+}
+section>a{
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 127px;
+}
+section>a:hover{
+    color: #006545;
+}
+.n_box{
+    width: 81.11%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.n_box>.box{
+    width: 100%; 
+    
+    border: 5px solid  #006545;
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 49px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.n_box>.box:hover{
+    transform: scale(1.02);
+    transition: 0.3s;
+}
+.n_box>.box>.con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 45px;
+}
+.n_box>.box>.con>h3{
+    font-size: 2.7rem;
+    font-weight: 700;
+    -webkit-text-stroke: 1px #006545;
+    -webkit-text-fill-color: transparent;
+    text-shadow:2px 0px #006545;
+}
+.n_box>.box>.con>p{
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 40px;
+    margin-top: 40px;
+}
+
+.n_box>.box:last-child{
+    margin-bottom: 164px;
+}
+
+.number_box{
+    width: 19.52%;
+    height: 50px;
+    margin: auto;
+    margin-bottom: 280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.number_box>button{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.num{
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+#first{
+    width: 13.04%;
+    height: 36px;
+    background-color: #707070;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 36px;
+}
+
+/* footer */
+footer{
+    width: 75.79%;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 20px;
+    padding-top: 53px;
+    display: flex;
+    justify-content: space-between;
+}
+.f_logo{
+    width: 14.03%;
+    
+}
+.f_left>ul{
+    margin: 49px 0 58px 0;
+}
+.f_left>ul>li>a{
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 60px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+}
+.f_left >p{
+    font-size: 1.8rem;
+    line-height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+.f_right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.f_right>a{
+    font-size: 4.2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    line-height: 88px;
+}
+
+
+
+
+
+
+/* 반응형 */
+
+/* pc */
+@media screen and (min-width:1023px) and (max-width:1204px) {
+    /**/
+    header .left{
+       width: 33.5%;
+   }
+   header .left .logo{
+       width: 45%;
+   }
+   header .right ul>li>a{
+       font-size: 2.5rem;
+   }
+   header .right{
+       width: 55.63%;
+       min-width: 554px;
+   }
+}
+
+/* 테블릿 */
+@media screen and (min-width:768px) and (max-width:1023px){
+    *{
+        font-size: 8px;
+    }
+
+    /**/
+
+    header{
+        min-width: 768px;
+    }
+    
+    header .left{
+        width: 36.5%;
+    }
+    header .left .logo{
+        width: 45%;
+    }
+    header .left .icon>a>img{
+        width: 74%;
+    }
+    header .right{
+        width: 56.62%;
+        min-width: 400px;
+    }
+    header .right ul>li>a{
+        font-size: 2.5rem;
+    }
+
+    /**/
+    .main{
+        width: 100%;
+    }
+    .title>h1{
+        font-size: 6rem;
+    }
+    .title>h1>span{
+        font-size: 6rem;
+    }
+
+    /**/
+    .bread{
+        width: 85%;
+    }
+    .b_box .box{
+        padding: 20px 10px;
+        height: 335px;
+    }
+    .b_box .box>img.hrt{
+        width: 17%;
+        left: 19rem;
+    }
+    .b_box .box>.con{
+        margin-top: 15px;
+    }
+    .con>h3{
+        font-size: 1.8rem;
+    }
+    .b_box .box>.con>.tag{
+        width: 85%;
+    }
+
+    /**/
+    .n_box{
+        width: 100%;
+    }
+    .n_box>.box{
+        width: 100%;
+    }
+    .n_box>.box>.con>h3{
+        font-size: 2rem;
+    }
+    .n_box>.box>.con>p{
+        font-size: 1.4rem;
+    }
+
+    /**/
+    .number_box {
+        width: 28.53%;
+    }
+    .input>input[type="text"]{
+        height: 60px;
+        font-size: 20px;
+    }
+    .input>a>img{
+        width: 10%;
+        top: -53px;
+    }
+
+    
+    /**/
+    .f_logo{
+        width: 30.05%;
+    }
+    .f_right{
+        width: 31%;
+    }
+    .f_right>a{
+        font-size: 3.5rem;
+    }
+}
+
+
+/* mobile */
+@media screen and (max-width:767px){
+    /**/
+    *{
+        font-size: 6px;
+    }
+    header .icon>a>img{
+        width: 80%;
+    }
+    header{
+        min-width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    header .left{
+        width: 43.5%;
+    }
+    
+    header .right{
+        display: none;
+    }
+    header .ham{
+        display: block;
+        width: 45px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    header .ham .box1,.box2,.box3{
+        width: 45px;
+        height: 5px;
+        background-color: #006545;
+    }
+
+    /**/
+    .sns>img{
+        width: 15%;
+    }
+    .sns>a{
+        font-size: 4.3rem;
+    }
+
+    /**/
+    .line{
+        width: 24.79%;
+    }
+    .bread{
+        width: 90%;
+    }
+    .b_box .box{
+        padding: 20px 7px;
+        height: 300px;
+    }
+   
+    .b_box .box>.con{
+        margin-top: 15px;
+    }
+    .con>h3{
+        font-size: 1.8rem;
+    }
+    .b_box .box>.con>.tag{
+        width: 95%;
+    }
+
+    .b_box .box>img.hrt{
+        width: 17%;
+        left: 18rem;
+    }
+
+    /**/
+    section{
+        width: 85%;
+    }
+    .n_box{
+        width: 100%;
+    }
+    .n_box>.box>.con{
+        margin-left: 33px;
+    }
+    .n_box>.box>.con>h3{
+        font-size: 2.8rem;
+    }
+    .n_box>.box>.con>p{
+        margin-top:25px ;
+    }
+    
+  
+
+    /**/
+    .number_box {
+        width: 39.53%;
+    }
+    .input{
+        width: 55.93%;
+    }
+    .input>input[type="text"]{
+        height: 60px;
+        font-size: 15px;
+    }
+    .input>a>img{
+        width: 9%;
+        top: -53px;
+    }
+
+    /**/
+    .f_logo{
+        width: 30.05%;
+    }
+    .f_right{
+        display: none;
+    }
+    .f_left>ul>li>a{
+        line-height: 45px;
+    }
+    .f_left>ul{
+        margin: 35px 0;
+    }
+
+    @media screen and (max-width:680px) {
+        header .left{
+            width: 50.51%;
+        }
+        /**/
+        footer{
+            width: 83.79%;
+        }
+        .f_right{
+            width: 43%;
+        }
+    }
+    @media screen and (max-width:528px) {
+        header .left{
+            width: 56.51%;
+        }
+        footer{
+            width: 83.79%;
+        }
+        .f_right{
+            width: 43%;
+        }
+    }
+    @media screen and (max-width:450px) {
+        header{
+            padding: 0 30px;
+        }
+        .logo a>img{
+            width: 100%;
+        }
+        .left .icon{
+            display: none;
+        }
+         /**/
+        .f_right{
+            display: none;
+        }
+        .f_left >p{
+            font-size: 1.4rem;
+            line-height: 25px;
+        }
+    }
+    
+}
+
+/* mobile */
+@media screen and (max-width:400px){
+    *{
+        font-size: 6px;
+    }
+    
+    /**/
+    .logo a>img{
+        width: 100%;
+    }
+    .left .icon{
+        display: none;
+    }
+
+    /**/
+    .main>p{
+        font-size: 2.2rem;
+    }
+    .main>img{
+        width: 50%;
+    }
+    .input{
+        width: 75%;
+    }
+    .input>a>img{
+        width: 25%;
+    }
+    .sns>img{
+        width: 16%;
+    }
+    .sns>img:first-child{
+        margin-right: 15px;
+    }
+    .sns>a{
+        font-size: 3.5rem;
+        text-align: center;
+        margin-left: 30px;
+    }
+
+    /**/
+    .bread{
+        width: 90%;
+    }
+   
+    .b_box .box{
+        width: 49%;
+        height: none;
+        margin-bottom: 20px;
+    }
+    .b_box .b1,.b2{
+        flex-wrap: wrap;
+    }
+    .b_box .b1{
+        margin-bottom: 0;
+    }
+    .b_box .box>.con>h3 {
+        font-size: 2.3rem;
+    }
+
+
+    /**/
+    .title_box .line{
+        margin: auto;
+        margin-top: 85px;
+    }
+    .title_box>img{
+        margin: 50px 0;
+    }
+    .n_box>.box{
+        flex-direction: column;
+        height: none;
+        padding: 30px 10px;
+    }
+    .n_box>.box>.con{
+        margin-left:0 ;
+        margin-top: 33px;
+        text-align: center;
+    }
+    .n_box>.box>.con>p{
+        line-height: 25px;
+    }
+    .n_box>.box>.con>h3{
+        font-size: 2.3rem;
+    }
+    
+   
+
+   
+    /**/
+    .number_box {
+        width: 85%;
+    }
+    .input{
+        width: 85.93%;
+    }
+    .input>input[type="text"]{
+        height: 50px;
+        font-size: 12px;
+    }
+    .input>a>img{
+        width: 9%;
+        top: -40px;
+    }
+
+   /**/
+   footer{
+    padding: 20px 0;
+    width: 88%;
+}
+.f_logo{
+    width: 45%;
+}
+.f_left>p{
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+.f_left>ul{
+    margin: 35px 0;
+}
+.f_left>ul>li>a{
+    line-height: 45px;
+}
+.f_right{
+    display: none;
+}
+}
+
+
+ 
+
+ 
