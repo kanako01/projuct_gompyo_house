@@ -4,66 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>제품관</title>
-    <link rel="stylesheet" href="css/제품관.css" />
-    <link rel="stylesheet" href="font_aos/aos.css" />
+    <title>Document</title>
     <script
       src="https://kit.fontawesome.com/d2d4546655.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/jquery-3.6.1.min.js"></script>
-    <script src="font_aos/aos.js"></script>
-    <script src="js/app.js"></script>
-    <script>
-      $(function () {
-        $(".ham").click(function () {
-          $(".ham_menu").stop(true).animate({ right: "0" });
-        });
-
-        $(".ham_menu i").click(function () {
-          $(".ham_menu").stop(true).animate({ right: "-60%" });
-        });
-      });
-    </script>
+    <link rel="stylesheet" href="제품.css">
   </head>
   <body>
     <div id="wrap">
-      <div class="ham_menu">
-        <i class="fa-solid fa-x"></i>
-        <ul>
-          <li><a href="sub_01(곰표이야기).html.html">곰표이야기</a></li>
-          <li><a href="sub_02(곰표발자취).html.html">곰표발자취</a></li>
-          <li><a href="sub_03(제품관).html.html">제품관</a></li>
-          <li><a href="sub_04(갓빵집).html.html">갓빵집</a></li>
-        </ul>
-      </div>
-      <!-- header -->
+        <div class="ham_menu">
+            <i class="fa-solid fa-x"></i>   
+          <ul>
+            <li><a href="sub_01(곰표이야기).html.html">곰표이야기</a></li>
+            <li><a href="sub_02(곰표발자취).html.html">곰표발자취</a></li>
+            <li><a href="sub_03(제품관).html.html">제품관</a></li>
+            <li><a href="sub_04(갓빵집).html.html">갓빵집</a></li>
+          </ul>
+        </div>
       <header>
-        <div class="left">
+        <div class="icon">
           <div class="logo">
-            <a href="index.html.html"><img src="img/logo.png" alt="/" /></a>
+            <a href="index.html.html"><img src="img/logo.png" alt="" /></a>
           </div>
-          <div class="icon">
+          <div class="icon_c">
             <a href="#">
-              <img src="img/알림.png" alt="/" />
+              <img src="img/알림.png" alt="/">
               <span>알림</span>
             </a>
           </div>
-          <div class="icon">
+          <div class="icon_c">
             <a href="#">
-              <img src="img/마이페이지.png" alt="/" />
+              <img src="img/마이페이지.png" alt="/">
               <span>로그인</span>
             </a>
           </div>
-          <div class="icon">
+          <div class="icon_c">
             <a href="#">
-              <img src="img/장바구니.png" alt="/" />
+              <img src="img/장바구니.png" alt="/">
               <span>장바구니</span>
             </a>
           </div>
         </div>
-
-        <div class="right">
+        <nav>
           <ul>
             <li><a href="sub_01(곰표이야기).html.html">곰표이야기</a></li>
             <li><a href="sub_02(곰표발자취).html.html">곰표발자취</a></li>
@@ -73,17 +56,14 @@
               <a href="#"><img src="img/패스 5.png" alt="/" /></a>
             </li>
           </ul>
-        </div>
-
+        </nav>
         <div class="ham">
-          <div class="box1"></div>
-          <div class="box2"></div>
-          <div class="box3"></div>
-        </div>
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="box3"></div>
+          </div>
       </header>
-      <!-- //header -->
 
-      <!-- 굿즈 전시관 -->
       <section class="goods">
         <img
           src="img/제품관/굿즈전시관.png"
@@ -141,31 +121,25 @@
         </div>
         <a href="#">더보기</a>
       </section>
-      <!-- //굿즈 전시관 -->
 
-      <!-- 제품 -->
       <section class="product">
-
-        
         <header class="pdt_head">
-          <h1 data-aos="zoom-in" data-aos-duration="1000">BEST SELLER</h1>
-          <div class="container">
-            <img src="img/제품관/밀눈.png" alt="/" class="img1">
-                <button type="button" class="onebutton"><img src="img/제품관/오른쪽.png" alt="/"></button>
-                <div class="main">
-                    <img src="img/제품관/오징어칩.png" alt="/">
-                    <h3 style="margin-top: 56px;">곰표 후라이드 오징어 튀김</h3>
-                </div>
-                <button type="button"><img src="img/제품관/왼쪽.png" alt="/"></button>
-                <img src="img/제품관/나쵸.png" alt="/" class="img2">
-          </div>
-          <div class="input">
-            <input type="text" placeholder=" 원하는 제품을 검색해주세요 !" />
-            <a href="#"><img src="img/제품관/돋보기.png" alt="/" /></a>
-          </div>
-        </header>
-
-
+            <h1 data-aos="zoom-in" data-aos-duration="1000">BEST SELLER</h1>
+            <div class="container">
+              <img src="img/제품관/밀눈.png" alt="/" class="img1">
+                  <button type="button" class="onebutton"><img src="img/제품관/오른쪽.png" alt="/"></button>
+                  <div class="main">
+                      <img src="img/제품관/오징어칩.png" alt="/">
+                      <h3 style="margin-top: 56px;">곰표 후라이드 오징어 튀김</h3>
+                  </div>
+                  <button type="button"><img src="img/제품관/왼쪽.png" alt="/"></button>
+                  <img src="img/제품관/나쵸.png" alt="/" class="img2">
+            </div>
+            <div class="input">
+              <input type="text" placeholder=" 원하는 제품을 검색해주세요 !" />
+              <a href="#"><img src="img/제품관/돋보기.png" alt="/" /></a>
+            </div>
+          </header>
         <section>
           <aside>
             <p>41개의 제품</p>
@@ -240,22 +214,20 @@
             </div>
           </div>
         </section>
-
-      <div class="number_box">
-        <button type="button">
-          <img src="img/제품관/동그라미오.png" alt="/" />
-        </button>
-        <div class="num" id="first">1</div>
-        <div class="num">2</div>
-        <div class="num">3</div>
-        <button type="button">
-          <img src="img/제품관/동그라미왼.png" alt="/" />
-        </button>
-      </div>
+        
+        <div class="number_box">
+            <button type="button">
+              <img src="img/제품관/동그라미오.png" alt="/" />
+            </button>
+            <div class="num" id="first">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <button type="button">
+              <img src="img/제품관/동그라미왼.png" alt="/" />
+            </button>
+          </div>
       </section>
-      <!-- //제품 -->
 
-      <!-- footer -->
       <footer>
         <div class="f_left">
           <a href="index.html.html"
@@ -290,55 +262,5 @@
         </div>
       </footer>
     </div>
-      <!-- //footer -->
-    <script>
-      AOS.init();
-
-      document.addEventListener("DOMContentLoaded", function () {
-        let items = document.querySelectorAll(".title i");
-        // items 가 배열이라 for문으로 이벤트 추가
-        for (let i = 0; i < items.length; i++) {
-          items.item(i).addEventListener("click", function () {
-            changeHeart(this);
-          });
-        }
-
-        const changeHeart = function (thisItem) {
-          // 하트가 체크 되었는지 아닌지에 따라 다른 동작하도록
-          const classLength = thisItem.classList.length; // for문 작업을 위해 요소의 class 갯수을 저장
-          for (let i = 0; i < classLength; i++) {
-            //console.log(thisItem.classList.item(i));
-            if (thisItem.classList.item(i) == "fa-solid") {
-              thisItem.classList.add("fa-regular");
-              thisItem.classList.remove("fa-solid");
-            } else if (thisItem.classList.item(i) == "fa-regular") {
-              thisItem.classList.add("fa-solid");
-              thisItem.classList.remove("fa-regular");
-            }
-          }
-        };
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        document.querySelector(".ham").addEventListener("click", function (e) {
-          if (document.querySelector(".ham_menu").classList.contains("on")) {
-            document.querySelector(".ham_menu").classList.remove("on");
-          } else {
-            document.querySelector(".ham_menu").classList.add("on");
-          }
-        });
-        document
-          .querySelector(".ham_menu i")
-          .addEventListener("click", function (e) {
-            if (document.querySelector(".ham_menu").classList.contains("off")) {
-              document.querySelector(".ham_menu").classList.remove("off");
-            } else {
-              document.querySelector(".ham_menu").classList.add("off");
-            }
-          });
-      });
-
-      // 반복 할줄 모름
-    </script>
   </body>
 </html>

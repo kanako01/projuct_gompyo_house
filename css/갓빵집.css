@@ -60,6 +60,9 @@ header .left{
 header .icon {
     text-align: center;
 }
+header .icon:hover{
+    transform: scale(1.09);
+}
 header .icon>a>img{
     display: block;
     margin: auto;

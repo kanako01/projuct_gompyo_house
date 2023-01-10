@@ -26,7 +26,7 @@ li{
 }
 img{
     display: block;
-    max-width: 100%;
+    max-width: 100;
 }
 body{
     color: #333;
@@ -35,21 +35,26 @@ body{
 
 /* header */
 #wrap{
-    width: 100vw; 
+    /* width: 100vw; 
+    height: 100vh;
+    margin: auto;
+    position: relative; */
+    width: calc(100% - 24.21%);
     height: 100vh;
     margin: auto;
     position: relative;
 }
 header{
-    width: 75.79%; /*1440/1900*100 */
+    width: 100%;
     min-width: 1000px;
-    height: 13.89%; /*150*/
+    height: 13.89%;
     overflow: hidden;
     margin: auto;
     padding: 0 20px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 header .left{
    width: 32.5%; /*465*/
@@ -60,6 +65,9 @@ header .left{
 }
 header .icon {
     text-align: center;
+}
+header .icon:hover{
+    transform: scale(1.09);
 }
 header .icon>a>img{
     display: block;
@@ -141,58 +149,46 @@ header .ham{
 }
 
 /*굿즈전시관*/
-#goods{
-    width: 75.79%;
-    margin: auto;
-    margin-bottom: 280px;
+section.goods>img{
+    margin: 107px auto 192px auto;
 }
-#goods>img{
-    margin: auto;
-    margin-top: 107px;
+
+.container{
+    width: 100%;
+    height: auto;
 }
-#goods>a{
-    text-align: center;
-    display: block;
-    font-size: 3rem;
-    font-weight: 700;
-    margin-top: 167px;
-}
-#goods>a:hover{
-    color: #006545;
-}
-.g_box{
-    margin-top: 192px;
+.container .content{
     width: 100%;
     display: flex;
-    flex-direction: column;
-}
-.g_box>.g1,.g2{
-    display: flex;
-    flex-direction: row;
+    flex-direction:row;
     justify-content: space-between;
 }
-.g_box>.g1{
-    margin-bottom: 20px;
+.container .content:nth-child(1){
+    margin-bottom: 50px;
 }
-.box{
-    text-align: center;
+.container .content .box{
+    width: 27.63%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
-.box>.title>img{
-    float: right;
-   display: block;
+.container .content .box>img{
+    position: relative;
+    width: 100%;
 }
-.box>.title>p{
+.container .content .box .title{
+    position: relative;
+    width: 100%;
+}
+.container .content .box .title>p{
     text-align: center;
     font-size: 2rem;
-    font-weight: 700;  
-    margin-top: 30px;
+    font-weight: 700;
 }
-.fa-heart{
-    font-size: 3.5rem;
-    /* position: relative;
-    left: 150px; */
-    transform: translate(150px, 0px);
-    cursor: pointer;
+.container .content .box .title>.fa-regular{
+    position: absolute;
+    font-size: 3rem;
+    right: 28px;
 }
 .fa-solid{
     color: rgb(232, 19, 19);
@@ -274,69 +270,25 @@ header .ham{
 }
 
 /* product2 */
-.title>h3{
-    font-size: 2rem;
-}
-.product2{
-    width: 75.79%;
-    margin: auto;
-}
-.product2>.line{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 200px;
-}
-.product2>.line>p{
-    font-size: 4rem;
-    font-weight: 700;
-    color: #000;
-}
-.product2>.line>select{
-    border: none;
-    font-size: 4rem;
-    font-weight: 700;
-}
-.product2>.line>select>option{
-    font-size: 2rem;
-    text-align: center;
-}
-.p_box{
-    width: 90%;
-    margin: auto;
+.container .content .box_a{
+    width: 27.63%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0 20px ;
-    box-sizing: border-box;
-    margin-bottom: 230px;
+    position: relative;
 }
-.p_box>.p1,.p2{
+.container .content .box_a>img{
+    position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
-.p_box>.p1{
-    margin-bottom: 100px;
-}
-.p_box .box{
+.container .content .box_a .title{
+    position: relative;
+    width: 100%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: end;
 }
-.p_box .box>h3{
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin: 30px 0 40px 0;
-    display: block;
-}
-.p_box .box>p{
-    font-size: 1.6rem;
-    font-weight: 600;
-    display: block;
+.container .content .box_a .title>.fa-regular{
+    position: absolute;
+    font-size: 3rem;
+    right: 28px;
 }
 .number_box{
     width: 14.53%; /*276*/

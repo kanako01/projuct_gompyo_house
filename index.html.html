@@ -23,49 +23,7 @@
       $(".ham_menu").stop(true).animate({right:'-60%'})
     });
 });
-    // $(".arrow").click(function(){
-    //   event.preventDefault();
-    //   $(".slide_box>ul").stop(true).animate({marginLeft:'-500px'},1000,function(){
-    //     $('.slide_box>ul>li:first-child').insertAfter('.slide_box>ul>li:last-child')
-    //   });
-    // });
-   
-
-//    let sliderWrap = document.getElementById('slide');
-//    let slideIndex = 0;
-//    let slides = document.querySelectorAll('.slide ul li');
-//    let totalSlide = slides.length;
-//    let slideWidth = sliderWrap.clientWidth;
-   
-//    slides.forEach(function(element) {
-//     element.style.width = slideWidth + 'px'; 
-//    });
-
-//    let slider = document.querySelector('.slide ul');
-//    slider.style.width = slideWidth * totalSlide + 'px'
-
-//    let btn = document.getElementById('arrow');
-//    btn.addEventListener('click',function(){
-//     event.preventDefault();
-//     plusSlides(1);
-//    });
-
-//    function plusSlides(n) {
-//     showSlides(slideIndex += n);
-// }
-
-// function showSlides(n) {
-//     slideIndex = n;
-//     if (slideIndex == -1) {
-//         slideIndex = totalSlide - 1;
-//     } else if (slideIndex === totalSlide) {
-//         slideIndex = 0;
-//     }
-
-//     slider.style.left = -(sliderWidth * slideIndex) + 'px';
-//     // pagination();
-// }
-
+  
   
   </script>
 </head>
@@ -226,31 +184,6 @@
               지금 만나보세요 !</p>
             <button type="button">MORE</button>
           </div>
-          <!-- <div class="slide">
-            <div class="slide_box">
-              <ul class="slider">
-                <li><img src="img/main/곰밀눈쉐이크.png" alt="/"></li>
-                <li><img src="img/main/오징어칩.png" alt="/"></li>
-                <li><img src="img/main/통밀도너츠.png" alt="/"></li>
-                <li><img src="img/main/나쵸.png" alt="/"></li>
-              </ul>
-            </div>
-            <div class="arrow">
-              <a href="#" class="prev"><img src="img/main/왼화살표.png" alt="/"></a>
-            </div>
-          </div>
-
-          <div class="best_content">
-            <p>곰표 제품관</p>
-            <div class="h1_box">
-              <ul>
-                <li><h1>곰표 후라이드 오징어튀김</h1></li>
-                <li><h1>곰표 밀눈쉐이크</h1></li>
-                <li><h1>곰표 나쵸</h1></li>
-                <li><h1>곰표 통밀도너츠</h1></li>
-              </ul>
-            </div> -->
-            <!-- <button type="button">MORE</button> -->
           </div>
         </div>
       </div>
@@ -389,91 +322,8 @@
   <script>
     AOS.init();
 
-   
-  //   window.onload = function() {
-  //   const kWrap =  document.querySelector('.b_box');
-  //   const slider = document.querySelector('.slide_box>ul');
-  //   const slideLis = slider.querySelectorAll('li')
-  //   const moveButton = kindWrap.querySelector('.arrow');
-
-  //   /* 클론 */
-  //   const clone1 = slideLis[0].cloneNode(true);
-  //   const cloneLast = slideLis[slideLis.length - 1].cloneNode(true);
-  //   slider.insertBefore(cloneLast, slideLis[0]); //(삽입할노드,기준점)
-  //   slider.appendChild(clone1); //자식노드추가한것임
-
-  //   /* 주요 변수 초기화 */  
-  //   let currentIdx = 0;
-  //   let translate = 0;
-  //   const speedTime = 500;
-
-  //   /* CSSOM 셋업 */
-  //   const sliderCloneLis = slider.querySelectorAll('li');
-  //   const liWidth = slideLis[0].clientWidth; //border,margin값뺴고 안에 padding 값만 포함한 넓이
-  //   const sliderWidth = liWidth * sliderCloneLis.length; //안넓이*li의 갯수 4
-  //   slider.style.width = `${sliderWidth}px`; //총길이
-  //   currentIdx = 1;
-  //   translate = -liWidth; //위치
-  //   slider.style.transform = `translateX(${translate}px)`
-
-  //   /* 리스너 설치하기 */
-  //   moveButton.addEventListener('click', moveSlide , function(){
-  //     this.className.add('active');
-  //   });
-
-  //   /* 슬라이드 실행 */
-  //   function move(D) {
-  //     currentIdx += (-1 * D); //?
-  //     translate += liWidth * D;
-  //     slider.style.transform = `translateX(${translate}px)`;
-  //     slider.style.transition = `all ${speedTime}ms ease`
-  //   }
-
-    
-  //   // const h1B = document.querySelector('.h1_box');
-  //   // const h1U = h1B.querySelector('ul');
-
-   
-      
-  //   /* 클릭 버튼 */
-  //   function moveSlide(event) {
-  //     event.preventDefault(); //a태그 클릭시 이동/창새로고침 막아줌
-  //     if (event.target.className === 'next') { //?
-  //       move(-1);
-        
-  //       if (currentIdx === sliderCloneLis.length -1) //1이 li의 순번째(0시작)랑 같아지면
-  //         setTimeout(() => {
-  //           slider.style.transition = 'none';
-  //           currentIdx = 1;
-  //           translate = -liWidth;
-  //           slider.style.transform = `translateX(${translate}px)`; //역순
-
-  //         }, speedTime);
-  //     } else {
-  //         move(1);
-  //         if (currentIdx === 0) {
-  //           setTimeout(() => {
-  //             slider.style.transition = 'none';
-  //             currentIdx = sliderCloneLis.length -2; //??
-  //             translate = -(liWidth * currentIdx);
-  //             slider.style.transform = `translateX(${translate}px)`;
-  //           }, speedTime);
-  //         }
-  //       }
-
-      
-            
-  //       // h1U.classList.add('active');
-  //   }
-  // }
   </script>
 </body>
 
 </html>
 
-<!-- $('button').click(function(){
-  $('.h1_box ul').stop().animate({marginTop:'98px'},1000,function(){
-    $('.h1_box li:first-child').insertAfter('.h1_box li:last-child');
-    $("ul").css({marginTop:'-0px'});
-  });
-}); -->

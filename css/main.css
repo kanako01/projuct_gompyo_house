@@ -64,6 +64,9 @@ header .left{
 header .icon {
     text-align: center;
 }
+header .icon:hover{
+    transform: scale(1.09);
+}
 
 header .icon>a>img{
     display: block;
@@ -372,7 +375,7 @@ header .ham{
 .cake_bg{
     width: 100%;
     height: 100vh;
-    background-image: url("img/main/배경.png");
+    background-image: url("../img/main/배경.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% , 50%;
@@ -425,11 +428,14 @@ header .ham{
     margin-left:55.83%; /*230*/
     margin-top: 51px;
 }
+.cake_content .next:hover{
+    transform: scale(1.09);
+}
 
 /* section */
 section{
     width: 100%;
-    background-image: url("img/main/체크.png");
+    background-image: url("../img/main/체크.png");
     background-attachment: fixed;
     position: relative;
 }
@@ -514,6 +520,9 @@ section{
     top: 5%;
     left: 35%;
 }
+.direction:hover{
+    transform: scale(1.09);
+}
 
 /* // */
 .box .b2{
@@ -566,7 +575,9 @@ section{
     position: absolute;
     top: 32%;
     right: 20px;
-
+}
+.direc:hover{
+    transform: scale(1.09);
 }
 
 /* nopo */
@@ -613,6 +624,9 @@ section{
     position: absolute;
     bottom: 10%;
     right: 5%;
+}
+.no_direc:hover{
+    transform: scale(1.09);
 }
 
 
